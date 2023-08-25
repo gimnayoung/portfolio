@@ -12,6 +12,7 @@ import './App.css';
 import { ThemeProvider } from './store/themeProvider';
 import { GlobalStyle } from './them/GlobalStyles';
 import { styled } from 'styled-components';
+import Skills from './page/Skills';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<><Main/></>}></Route>
             <Route path='/about' element={<><About/></>}></Route>
+            <Route path='/skills' element={<><Skills/></>}></Route>
           </Routes>
         </Suspense>
       </ThemeProvider>
