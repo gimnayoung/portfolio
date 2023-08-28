@@ -5,31 +5,60 @@ import {BsFillPersonFill} from 'react-icons/bs'
 import {LiaBirthdayCakeSolid} from "react-icons/lia"
 import {HiOutlineHome} from "react-icons/hi"
 import {FiPhoneCall} from "react-icons/fi"
-import {HiOutlineMail} from 'react-icons/hi'
+// import {HiOutlineMail} from 'react-icons/hi'
 import {BsGithub} from 'react-icons/bs'
+//해야할일 적어놓기
+//1.box가 a태그여야함
+//링크로 연결해야함 
+//모달 창 만들어야함
+//const 로 통일
+//hover시 css되게 하기
 
-let AboutWrap=styled.div`
+const AboutWrap=styled.div`
 margin: 0 auto;
 max-width: 1300px;
 display: flex;
-
 `
-let ImgWrap=styled.div`
+const ImgWrap=styled.div`
 max-width: 300px;
 `
-let Img= styled.img`
+const Img= styled.img`
 max-width: 100%;
 border-radius: 47%;
 `
-let Wrap=styled.div`
+const Wrap=styled.div`
 padding:8px;
 width: 1100px;
 margin: 0 auto;
 background-color: white;
 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 `
+const Dark=styled.div`
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.65);
 
-let Box=styled.div`
+  opacity:0;
+  transition:all .2s linear;
+`
+const Puls=styled.div`
+position: absolute;
+right: 60px;
+opacity: 0;
+transition:all .2s linear;
+`
+const Span=styled.span`
+position: absolute;
+color: white;
+right: 60px;
+font-weight: 600;
+top:50%;
+`
+const Box=styled.div`
+position:relative;
 margin-right:4px;
 padding: 4px;
 align-items: center;
@@ -38,25 +67,32 @@ flex-direction: column;
 justify-content: space-around;
 width: 200px;
 height: 120px;
-background-color: white;
+/* background-color: red; */
 border: 1px gray solid;
 border-radius:5px;
+${Dark}:hover {
+    /* background:rgba(0, 0, 0, 0.65);  */
+    opacity:0.8;
+    cursor: pointer;
+}
 `
-let IconWrap=styled.div`
+
+const IconWrap=styled.div`
 /* width: 650px; */
 display: flex;
 /* border: 1px red solid; */
 flex-direction: column;
 justify-content: space-evenly;
 `
-let Bottom= styled.div`
+const Bottom= styled.div`
 display: flex;
 `
-let Top = styled.div`
+const Top = styled.div`
 display: flex;
 justify-content: space-between;
+
 `
-let Icon =styled.div`
+const Icon =styled.div`
 background-color:#1E74C7;
 border-radius: 50%;
 width: 84px;
@@ -66,20 +102,21 @@ align-items: center;
 justify-content:center;
 color:white;
 `
-let Font=styled.div`
+const Font=styled.div`
 font-weight: 800;
 color:gray;
 `
-let Title =styled.h1`
+const Title =styled.h1`
 width: 150px;
 font-size: 20px;
 font-weight: 800;
 margin: 0 auto;
 `
-let Contents=styled.div`
+const Contents=styled.div`
 display: flex;
 justify-content: space-around;
 `
+
 function About(){
     return(
         <AboutWrap>
@@ -97,6 +134,7 @@ function About(){
                                     <BsFillPersonFill size={'35px'}></BsFillPersonFill>
                                 </Icon>
                                 <Font>김나영</Font>
+                                <Dark><Span>더보기 클릭</Span></Dark>
                             </Box>
                             <Box>
                                 <Icon>
@@ -123,6 +161,7 @@ function About(){
                                     <BsGithub size={'35px'}/> 
                                 </Icon>   
                                 <Font>gimnayoung</Font>
+                                <Dark><Span>더보기 클릭</Span></Dark>
                             </Box>
                             <Box>
                                 <Icon>
