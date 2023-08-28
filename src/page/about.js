@@ -67,7 +67,6 @@ flex-direction: column;
 justify-content: space-around;
 width: 200px;
 height: 120px;
-/* background-color: red; */
 border: 1px gray solid;
 border-radius:5px;
 ${Dark}:hover {

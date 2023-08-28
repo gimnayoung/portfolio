@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import Main from './page/main'
 import About from './page/about';
+import Modal from './components/modal';
 
 import './App.css';
 
@@ -23,7 +24,7 @@ function App() {
           <Header/>
           <Routes>
             <Route path='/' element={<><Main/></>}></Route>
-            <Route path='/about' element={<><About/></>}></Route>
+            <Route path='/about' element={<><About/><Modal/></>}></Route>
             <Route path='/skills' element={<><Skills/></>}></Route>
           </Routes>
         </Suspense>
