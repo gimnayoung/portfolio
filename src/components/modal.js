@@ -27,6 +27,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: end;
+  margin-bottom: 4px;
 `;
 const IconBox = styled.div`
   width: 45px;
@@ -45,22 +46,41 @@ const State = styled.div`
   background-color: white;
   border-radius: 4px 4px 0 0;
 `;
-const Contents = styled.div``;
-function Modal() {
+const Contents = styled.div`
+  /* border: 1px red solid; */
+  padding: 4px;
+`;
+const Title = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  color: orange;
+`;
+function Modal(props) {
+  const closeModal = () => {
+    props.setOffModal(false);
+  };
   return (
     <ModalWrap>
       <Wrap>
         <Header>
           <State>
-            <div>내위치</div>
+            <div>김나영</div>
             <RiCloseFill size={15}></RiCloseFill>
           </State>
-          <IconBox>
+          <IconBox onClick={closeModal}>
             <VscChromeMinimize></VscChromeMinimize>
             <RiCloseFill size={20}></RiCloseFill>
           </IconBox>
         </Header>
-        <Contents>내용</Contents>
+        <Contents>
+          <Title>README.md</Title>
+          <div>
+            {/* 나는 이런사람 입니다 평소에 웹/앱을 구경할때 다양한 기능들을 어떻게
+            구현하는지 궁금증을 가집니다 */}
+          </div>
+          <Title>More.md</Title>
+          <div>{/* 끊임없이 배우려는 자세와 */}</div>
+        </Contents>
       </Wrap>
     </ModalWrap>
   );

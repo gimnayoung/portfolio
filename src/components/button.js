@@ -1,24 +1,23 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
 
-let MoreBut=styled.button`
-background:#1E74C7;
-    color:#fff;
-    border:none;
-    position:relative;
-    height:60px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-
-`
-let ButWrap=styled.div`
-position: fixed;
-z-index: 999999;
-bottom: 4%;
-right: 45%;
-`
+let MoreBut = styled.a`
+  background: #1e74c7;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+`;
+let ButWrap = styled.div`
+  position: fixed;
+  z-index: 999999;
+  bottom: 4%;
+  right: 45%;
+`;
 // html,body{
 //     height:100%;
 //   }
@@ -55,14 +54,13 @@ right: 45%;
 //     width:100%;
 //     transition:800ms ease all;
 //   }
-  
 
-function Button(){
-    return(
-        <ButWrap>
-         <MoreBut>More</MoreBut>
-        </ButWrap>
-    )
+function Button() {
+  return (
+    <ButWrap>
+      <MoreBut href="/about">More</MoreBut>
+    </ButWrap>
+  );
 }
 
-export default Button
+export default Button;
