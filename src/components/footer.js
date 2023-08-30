@@ -1,3 +1,5 @@
+//애니메이션 돌아가는거 천천히
+//more버튼 수정
 import { styled } from 'styled-components'
 import '../App.css'
 import Img1 from "../img/Kimnayoung.png"
@@ -13,15 +15,22 @@ padding: 12px;
     
 `
 let Img =styled.img`
-width:530px;
-height: 55px;
+/* max-width:530px; */
+width: 48%;
+height: 43px;
+/* border: 1px red solid; */
 `
 const ImgBox=styled.div`
-opacity: 0.2;
+opacity: 0.3;
 display: flex;
 justify-content: space-between;
 `
 const Box=styled.div`
+float: right;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 45px;
 `
 const Wrap=styled.div`
 width: 1100px;
@@ -44,7 +53,7 @@ function Footer(){
                     </ImgBox>
                     <Box>
                         <Alarm>📍 사이트에 안에 모든 이미지는 저작권이 없는 이미지 입니다.</Alarm>
-                        <Font>Created in 08 2023 。by Nayoung Kim💙 </Font>
+                        <Font> 💙 Created in 08 2023 。by Nayoung Kim </Font>
                     </Box>
                 </Wrap>
             </FooterWrap>
