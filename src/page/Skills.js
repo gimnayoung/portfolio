@@ -1,3 +1,4 @@
+//순서바꾸기
 import { styled } from "styled-components";
 
 import {DiReact} from "react-icons/di"
@@ -9,6 +10,7 @@ import {BsGithub} from 'react-icons/bs'
 import {SiGithubpages} from 'react-icons/si'
 import {FaFigma} from 'react-icons/fa'
 import {BsDiscord} from 'react-icons/bs'
+import {BiLogoTailwindCss} from "react-icons/bi"
 
 
 const SkillWrap=styled.div`
@@ -119,11 +121,11 @@ function Skills(){
                 </SkillBox>
                 <SkillBox>
                     <Icon>
-                        <SiCss3 size={67} color="white"/>
+                        <BiLogoTailwindCss size={67} color="white"/>
                     </Icon>
                     <TextBox>
-                        <Title>?</Title>
-                        <div>리액트를 사용하여 프로젝트를 한 경험이 있습니다</div>
+                        <Title>TailWind</Title>
+                        <div>테일윈드를 사용하여 프로젝트를 한 경험이 있습니다</div>
                     </TextBox>
                 </SkillBox>
             </Top>

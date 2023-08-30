@@ -17,7 +17,6 @@ align-items: center;
   justify-content: space-between;
 `
 let LogoImg=styled.img`
-  dis
   max-width: 100px;
   height: 50px;
 `

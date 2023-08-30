@@ -14,6 +14,7 @@ import { ThemeProvider } from "./store/themeProvider";
 import { GlobalStyle } from "./them/GlobalStyles";
 import { styled } from "styled-components";
 import Skills from "./page/Skills";
+import Contact from "./page/contact";
 
 function App() {
   return (
@@ -44,6 +45,14 @@ function App() {
               element={
                 <>
                   <Skills />
+                </>
+              }
+            ></Route>
+            <Route
+              path="/contact"
+              element={
+                <>
+                  <Contact />
                 </>
               }
             ></Route>
