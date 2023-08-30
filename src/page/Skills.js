@@ -72,7 +72,7 @@ justify-content: space-around;
 function Skills(){
     return(
         <SkillWrap>
-            <MainTitle>FrontEnd</MainTitle>
+            <MainTitle>🔨 FrontEnd</MainTitle>
             <Top>
                 <SkillBox>
                     <Icon>

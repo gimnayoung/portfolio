@@ -11,11 +11,8 @@ import { BsGithub } from "react-icons/bs";
 import { useState } from "react";
 
 //해야할일 적어놓기
-//1.box가 a태그여야함
-//링크로 연결해야함
-//모달 창 만들어야함
-//const 로 통일
-//hover시 css되게 하기
+//링크로 연결해야함 (?)
+//밑으로 스크롤해서 나오게하던가 아니면 라이브러리 이용해서 하던가 해야함 
 
 const AboutWrap = styled.div`
   margin: 0 auto;
