@@ -59,16 +59,16 @@ let BlackFont = styled.div`
 `;
 
 function Main() {
-  const [count, setCount] = useState(1);
-  useEffect(() => {
-    typingHandling();
-  }, []);
-  const [typing, setTyping] = useState(false);
+  // const [count, setCount] = useState(1);
+  // useEffect(() => {
+  //   typingHandling();
+  // }, []);
+  // const [typing, setTyping] = useState(false);
 
-  const typingHandling = () => {
-    /* setTyping(typing=>!typing)*/
-  };
-  const span = useRef();
+  // const typingHandling = () => {
+  //   /* setTyping(typing=>!typing)*/
+  // };
+  // const span = useRef();
   return (
     <>
       <ToggleLayout>
@@ -81,11 +81,6 @@ function Main() {
                 <BlackFont>
                   프론트엔드<span>를</span>
                 </BlackFont>
-                {/* {
-                                typing===false? <Typing1/> : <Typing2/>
-                            } */}
-                {/* <Typing2/> */}
-                {/* {<Test/>} */}
                 <BlackFont>주니어 개발자 김나영입니다.</BlackFont>
                 <div></div>
               </Left>
@@ -94,7 +89,6 @@ function Main() {
               </Right>
             </MainCard>
           </MainCont>
-          {/* <PortFolioImg src={PortFolio}></PortFolioImg> */}
           <Button />
         </MainWrap>
       </ToggleLayout>
