@@ -1,10 +1,13 @@
 import { styled } from "styled-components";
-import ThanksImg from "../img/sendMessage3.jpg"
 import { useState } from "react";
+
+import GuestBook from"../components/guestBook"
+import ThanksImg from "../img/sendMessage3.jpg"
+
 const ContactWrap=styled.div`
 margin: 0 auto;
 padding: 0;
-max-width: 1200px;
+max-width: 1400px;
 box-sizing: border-box;
 border: 1px red solid;
 display: flex;
@@ -15,7 +18,7 @@ const CardBox=styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-max-width: 500px;
+max-width: 450px;
 height: 550px;
 width: 100%;
 /* border: 1px red solid; */
@@ -36,17 +39,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
-max-width: 500px;
+max-width: 390px;
 height: 550px;
 width: 100%;
 /* border: 1px red solid; */
 `
 const UserInput=styled.input`
-width: 450px;
+width: 100%;
 height: ${props => props.height || '44px'};
 `
 const SendBut=styled.button`
-width: 450px;
+width: 395px;
 height:40px;
 background: #1E74C7;
   color: #fff;
@@ -55,9 +58,12 @@ background: #1E74C7;
   cursor: pointer;
   font-size: 20px;
 `
+const GuestWrap=styled.div`
+`
 function Contact(){
     // const [userName,setUSerName]=useState;
     return(
+        <>
         <ContactWrap>
             <CardBox>
                 <Title>Contact Me 💌</Title>
@@ -66,12 +72,14 @@ function Contact(){
                 <ContactImg src={ThanksImg}></ContactImg>
             </CardBox>
             <UserInputBox>
-                <UserInput placeholder="Name"></UserInput>
+                <UserInput placeholder="Name" maxLength={5}></UserInput>
                 <UserInput placeholder="Title"></UserInput>
-                <UserInput placeholder="Message" height={"335px"}></UserInput>
+                <UserInput placeholder="Message" height={"335px"} maxLength={111}></UserInput>
                 <SendBut>Send</SendBut>
             </UserInputBox>
+            <GuestBook/>
         </ContactWrap>
+        </>
     )
 }
 export  default Contact;
