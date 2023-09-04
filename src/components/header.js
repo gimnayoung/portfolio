@@ -7,6 +7,7 @@ import Logo from "../img/logo.png"
 
 let HeaderWrap =styled.div`
     height: 72px;
+    margin-bottom: 50px;
 `
 let Wrap = styled.div`
 height: 72px;
@@ -36,10 +37,11 @@ function Header(){
             <Wrap> 
                 <LogoImg src={Logo}></LogoImg>
                 <NavBox>
-                    <a>INTRO</a>
-                    <a>ABOUT</a>
-                    <a>STACKS</a>
-                    <a>CONTACT</a>
+                    <a href='/'>HOME</a>
+                    <a href='/about'>ABOUT</a>
+                    <a href='/skills'>SKILLS</a>
+                    <a href='/projects'>PROJECTS</a>
+                    <a href='/contact'>CONTACT</a>
                 </NavBox>
                 <div>야간모드</div>
             </Wrap>

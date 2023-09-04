@@ -15,6 +15,7 @@ import { GlobalStyle } from "./them/GlobalStyles";
 import { styled } from "styled-components";
 import Skills from "./page/Skills";
 import Contact from "./page/contact";
+import Projects from "./page/project";
 
 function App() {
   return (
@@ -53,6 +54,14 @@ function App() {
               element={
                 <>
                   <Contact />
+                </>
+              }
+            ></Route>
+            <Route
+              path="/projects"
+              element={
+                <>
+                  <Projects />
                 </>
               }
             ></Route>

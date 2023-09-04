@@ -93,7 +93,7 @@ function GuestBook(props){
    
     return(
         <GuestBookWrap>
-            <Title>Guest Book 📝</Title>
+            <Title>📝 Guest Book</Title>
             <UserSayBox>
                 {/* <New>새로고침을 눌러주세요.</New> 
                 <RefreshBut><IoIosRefresh size={20}/></RefreshBut> */}

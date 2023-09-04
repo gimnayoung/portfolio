@@ -126,7 +126,7 @@ function About() {
     <>
       <AboutWrap>
         <Wrap>
-          <Title>💌 About me!</Title>
+          <Title>✨ About Me</Title>
           <Contents>
             <ImgWrap>
               <Img src={AboutImg}></Img>
@@ -175,7 +175,7 @@ function About() {
                   <Icon>
                     <BsGithub size={"35px"} />
                   </Icon>
-                  <Font>gimnayoung</Font>
+                  <Font>kny_7_@naver.com</Font>
                 </Box>
               </Bottom>
             </IconWrap>

@@ -153,7 +153,7 @@ function Contact(){
         <>
         <ContactWrap>
             <CardBox>
-                <Title>Contact Me 💌</Title>
+                <Title>💌 Contact Me</Title>
                 <div>- 하고 싶은 피드백 혹은 메세지를 남겨주세요.</div>
                 <div>감사합니다 : )</div>
                 <ContactImg src={ThanksImg}></ContactImg>
