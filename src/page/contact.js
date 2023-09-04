@@ -12,6 +12,11 @@ import {db} from '../firebase/firebase-config'
 import {collection,getDocs,getFirestore,addDoc,orderBy,query } from "firebase/firestore"
 // import { firestore } from "../firebase/firebase-config"; 1
 
+const Font=styled.div`
+font-size: ${props => props.font_size || '12px'};
+font-weight: 700;
+color:gray;
+`
 const ContactWrap=styled.div`
 margin: 0 auto;
 padding: 0;
@@ -43,21 +48,24 @@ font-size: 22px;
 font-weight: bold;
 `
 const UserInputBox=styled.div`
+box-sizing:border-box;
+padding: 4px;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
 max-width: 370px;
-height: 550px;
 width: 100%;
-/* border: 1px red solid; */
+height: 550px;
 `
 const UserInput=styled.input`
-width: 100%;
+box-sizing: border-box;
+width: ${props => props.width || '100%'};
 height: ${props => props.height || '44px'};
 `
 const SendBut=styled.button`
-width: 380px;
+box-sizing: border-box;
+width: 100%;
 height:40px;
 background: #1E74C7;
   color: #fff;
@@ -67,13 +75,22 @@ background: #1E74C7;
   font-size: 20px;
 `
 const CheckInput=styled.input`
-border: 1px red solid;
+width: 20px;
+height: 20px;
+/* border: 1px red solid; */
 `
 const CheckBox=styled.div`
 width: 100%;
 /* border: 1px red solid; */
 display: flex;
-justify-content: right;
+align-items: center;
+justify-content: space-between;
+`
+const CheckBox2=styled.div`
+width: 70px;
+/* border: 1px red solid; */
+display: flex;
+align-items: center;
 `
 const GuestWrap=styled.div`
 `
@@ -146,9 +163,13 @@ function Contact(){
                 <UserInput type="text" placeholder="Title" maxLength={13} onChange={titleHandler}></UserInput>
                 <CheckBox>
                     <UserInput 
-                    type="password" placeholder="password" maxLength={4} height={"15px"} onChange={passwordHandler}></UserInput>
-                    <CheckInput onClick={()=>{setSecret(secret+1)
-                    console.log(secret)}} type="checkbox" for="s"/><label id="s">나만보기</label>
+                    type="password" placeholder="password" maxLength={4} height={"28px"} width={"80%"} onChange={passwordHandler}>
+                    </UserInput>
+                    <CheckBox2>
+                        <CheckInput onClick={()=>{setSecret(secret+1)
+                        console.log(secret)}} type="checkbox" for="s"/>
+                        <Font id="s">비밀글</Font>
+                    </CheckBox2>
                 </CheckBox>
                 <UserInput type="text" placeholder="Message" height={"300px"} maxLength={67} onChange={messageHandler}></UserInput>
                 <SendBut onClick={()=>{
