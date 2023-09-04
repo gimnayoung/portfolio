@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 // import {db} from '../firebase/firebase-config'
 // import {collection,getDocs} from "firebase/firestore"
 
-//글자 수 제한둬야함 
-//서버 api연결
+//이름을 Board & Book
 const GuestBookWrap=styled.div`
 display: flex;
 flex-direction: column;
@@ -18,10 +17,11 @@ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `
 const UserSay=styled.div`
 padding: 8px;
-/* max-width:285px; */
-width: 93%;
-height: 110px;
-border-radius: 20px;
+max-width:285px;
+width: 100%;
+max-height: 105px;
+height: 100%;
+border-radius: 22px;
 margin-bottom: 16px;
 background-color: ${props => props.background_color || '#93BFCF'};
 `
@@ -37,12 +37,14 @@ border-radius: 50%;
 `
 const UserSayBox=styled.div`
 /* border: 1px red solid; */
-max-width:390px;
+max-width:350px;
+width: 100%;
 height: 400px;
 overflow-y: scroll;
 padding: 12px;
  display: flex;
  flex-direction: column;
+ align-items: center;
 `
 const UserName=styled.div`
 font-size:13px;
@@ -51,7 +53,7 @@ padding: 4px;
 `
 const UserTitle=styled.div`
 font-size: 14px;
-color:gray;
+color: ${props => props.color || 'gray'};
 font-weight: 800;
 padding: 4px 4px 2px 4px;
 `
@@ -95,21 +97,24 @@ function GuestBook(props){
             <UserSayBox>
                 {/* <New>새로고침을 눌러주세요.</New> 
                 <RefreshBut><IoIosRefresh size={20}/></RefreshBut> */}
-                {
+                 {
                     props.users.map((list,index)=>
-                        (
+                    (
                         <UserSay background_color={'#93BFCF'} key={list.id}>
-                            <UserName>{list.name}</UserName>
-                            <UserTitle>{list.title}</UserTitle>
-                            <UserMessage>{list.message}</UserMessage>
+                            {
+                                list.count%2===1 ? (
+                                <>
+                                 <UserTitle color="white">비밀 글 입니다. </UserTitle>
+                                </>) : (
+                                <>
+                                <UserName>{list.name}</UserName>
+                                <UserTitle>{list.title}</UserTitle>
+                                <UserMessage>{list.message}</UserMessage>
+                                </>)
+                            }
                         </UserSay>
-                    ))
-                }
-                <UserSay background_color={"#BDCDD6"}>
-                    <UserName>김나영</UserName>
-                    <UserTitle>제목도 몇글자인지 알아야합니당 얼마나(20)</UserTitle>
-                    <UserMessage>짧은글 test용입니다</UserMessage>
-                </UserSay>
+                    )
+                )}
                 {/* <UserSay background_color={"#EEE9DA"}>Test</UserSay>
                 <UserSay >Test</UserSay>
                 <UserSay background_color={"#BDCDD6"}>Test</UserSay>

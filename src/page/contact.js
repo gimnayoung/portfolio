@@ -1,10 +1,15 @@
+//id가 바뀌게 하기
+//삭제하는 버튼 만들기
+//안내말 쓰기 
+//비밀글 만들기 ? 
+
 import { styled } from "styled-components";
 import { useEffect, useState } from "react";
 
 import GuestBook from"../components/guestBook"
 import ThanksImg from "../img/sendMessage3.jpg"
 import {db} from '../firebase/firebase-config'
-import {collection,getDocs,addDoc } from "firebase/firestore"
+import {collection,getDocs,getFirestore,addDoc,orderBy,query } from "firebase/firestore"
 // import { firestore } from "../firebase/firebase-config"; 1
 
 const ContactWrap=styled.div`
@@ -61,28 +66,50 @@ background: #1E74C7;
   cursor: pointer;
   font-size: 20px;
 `
+const CheckInput=styled.input`
+border: 1px red solid;
+`
+const CheckBox=styled.div`
+width: 100%;
+/* border: 1px red solid; */
+display: flex;
+justify-content: right;
+`
 const GuestWrap=styled.div`
 `
-function Contact(props){
-    //DB데이터 가져옴
+function Contact(){
+    //DB데이터 그냥 불러오기
+    // useEffect(()=>{
+    //     const getUsers= async()=>{
+    //         const data = await getDocs(usersCollectionRef);
+    //         setUsers(data.docs.map((doc)=>({...doc.data(),id:doc.id})))
+    //     }
+    //     getUsers();
+    // },[])
+
+    //DB데이터 시간 역순불러오기
     useEffect(()=>{
         const getUsers= async()=>{
-            const data = await getDocs(usersCollectionRef);
-            setUsers(data.docs.map((doc)=>({...doc.data(),id:doc.id})))
+            const result=await getDocs(query(usersCollectionRef, orderBy("createdAt","desc")))
+            const boards=result.docs.map((el)=>el.data())
+            setUsers(boards);
         }
         getUsers();
-        //console.log("안녕")
     },[])
-    // useEffect(()=>{
-    //     setUserId(userid=userid+1); 
-    // },[submitUserData()])
 
+    // useEffect(()=>{
+    //     setUserId(users.length)
+    //     console.log(userid)
+    // },[])
     const [users,setUsers]=useState([]);
-    const [userid,setUserId]=useState(1);
+    const [userid,setUserId]=useState(0);
     const [userName,setUserName]=useState('');
     const [userTitle,setUserTitle]=useState('');
     const [userMessage,setUserMessage]=useState('');
+    const [userPassword,setUserPassword]=useState('');
     const usersCollectionRef =collection(db,"users");
+
+    const [secret,setSecret]=useState(0);
 
     //event 핸들러
     const nameHandler=(e)=>{
@@ -94,13 +121,17 @@ function Contact(props){
     const messageHandler=(e)=>{
         setUserMessage(e.target.value);
     }
-    //서버에 데이터 보냄
-    const submitUserData= async()=>{
-
-        await addDoc(usersCollectionRef, {id:userid , name:userName , title:userTitle, message : userMessage })
-        alert('감사합니다.');
+    const passwordHandler=(e)=>{
+        setUserPassword(e.target.value);
     }
-
+    //DB에 유저 데이터 보내기
+    const submitUserData= async()=>{
+        await addDoc(usersCollectionRef, { 
+            createdAt:Date.now(), name:userName , title:userTitle, password:userPassword ,message : userMessage ,count : secret
+        })
+        alert('감사합니다.');
+        window.location.reload();
+    }
     return(
         <>
         <ContactWrap>
@@ -113,15 +144,20 @@ function Contact(props){
             <UserInputBox>
                 <UserInput type="text" placeholder="Name" maxLength={5} onChange={nameHandler}></UserInput>
                 <UserInput type="text" placeholder="Title" maxLength={13} onChange={titleHandler}></UserInput>
-                <UserInput type="text" placeholder="Message" height={"335px"} maxLength={67} onChange={messageHandler}></UserInput>
+                <CheckBox>
+                    <UserInput 
+                    type="password" placeholder="password" maxLength={4} height={"15px"} onChange={passwordHandler}></UserInput>
+                    <CheckInput onClick={()=>{setSecret(secret+1)
+                    console.log(secret)}} type="checkbox" for="s"/><label id="s">나만보기</label>
+                </CheckBox>
+                <UserInput type="text" placeholder="Message" height={"300px"} maxLength={67} onChange={messageHandler}></UserInput>
                 <SendBut onClick={()=>{
                     submitUserData();
                 }}>
                         Send
                 </SendBut>
             </UserInputBox>
-            {/* 바뀐내용말고 데이터 담고 꺼내온거 보여줘야함 */}
-            <GuestBook users={users}/>
+            <GuestBook users={users} secret={secret}/>
         </ContactWrap>
         </>
     )
