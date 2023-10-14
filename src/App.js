@@ -7,6 +7,7 @@ import Header from "./components/header";
 import Main from "./page/main";
 import About from "./page/about";
 import Modal from "./components/modal";
+import Main2 from "./page/main2"
 
 import "./App.css";
 
@@ -29,7 +30,8 @@ function App() {
               path="/"
               element={
                 <>
-                  <Main />
+                  {/* <Main /> */}
+                  <Main2></Main2>
                 </>
               }
             ></Route>

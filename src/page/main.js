@@ -72,25 +72,6 @@ function Main() {
   return (
     <>
       <ToggleLayout>
-        <MainWrap>
-          {/* <KimnayoungImg src={Kimnayoung} className="knyImg"></KimnayoungImg> */}
-          <MainCont>
-            <MainCard>
-              <Left>
-                <GrayFont>안녕하세요 </GrayFont>
-                <BlackFont>
-                  프론트엔드<span>를</span>
-                </BlackFont>
-                <BlackFont>주니어 개발자 김나영입니다.</BlackFont>
-                <div></div>
-              </Left>
-              <Right>
-                <MainImgBox src={MainImg}></MainImgBox>
-              </Right>
-            </MainCard>
-          </MainCont>
-          <Button />
-        </MainWrap>
       </ToggleLayout>
       <Footer></Footer>
     </>
@@ -104,3 +85,24 @@ export default Main;
 
 // setText('');
 //             setCount(0);
+
+
+// <MainWrap>
+//           {/* <KimnayoungImg src={Kimnayoung} className="knyImg"></KimnayoungImg> */}
+//           <MainCont>
+//             <MainCard>
+//               <Left>
+//                 <GrayFont>안녕하세요 </GrayFont>
+//                 <BlackFont>
+//                   프론트엔드<span>를</span>
+//                 </BlackFont>
+//                 <BlackFont>주니어 개발자 김나영입니다.</BlackFont>
+//                 <div></div>
+//               </Left>
+//               <Right>
+//                 <MainImgBox src={MainImg}></MainImgBox>
+//               </Right>
+//             </MainCard>
+//           </MainCont>
+//           <Button />
+//         </MainWrap>

@@ -144,7 +144,7 @@ function Contact(){
     //DB에 유저 데이터 보내기
     const submitUserData= async()=>{
         await addDoc(usersCollectionRef, { 
-            createdAt:Date.now(), name:userName , title:userTitle, password:userPassword ,message : userMessage ,count : secret
+            createdAt:Date.now(), name:userName , title:userTitle, password:userPassword ,message : userMessage ,count : secret 
         })
         alert('감사합니다.');
         window.location.reload();
