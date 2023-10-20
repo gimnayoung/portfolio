@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 //이름을 Board & Book
 const GuestBookWrap=styled.div`
+padding: 4px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -14,6 +15,15 @@ max-width:395px;
 width:100%;
 background-color:white;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  @media screen and (max-width: 1100px) {
+    max-width: 350px;
+    width: 100%;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 400px;
+    width: 100%;
+  }
 `
 const UserSay=styled.div`
 padding: 8px;

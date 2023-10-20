@@ -176,13 +176,14 @@ function About() {
                     <BsGithub size={"35px"} />
                   </Icon>
                   <Font>kny_7_@naver.com</Font>
+                  
                 </Box>
               </Bottom>
             </IconWrap>
           </Contents>
         </Wrap>
       </AboutWrap>
-      {OnModal && <Modal setOffModal={setOffModal} />}
+      {/* {OnModal && <Modal setOffModal={setOffModal} />} */}
     </>
   );
 }

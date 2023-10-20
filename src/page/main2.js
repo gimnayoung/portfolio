@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import AboutImg from "../img/aboutimg.jpg";
+import Modal from "../components/modal";
 
 import { BsFillPersonFill } from "react-icons/bs";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
@@ -17,12 +18,14 @@ const animation = keyframes`
   }
 `;
 const Wrap=styled.div`
+
 margin: 0 auto;
 display: flex;
 padding: 0;
 box-sizing: border-box;
-width: 1200px;
+max-width: 1200px;
 flex-direction: column;
+
 `
 const IntroduceWrap=styled.div`
 margin-bottom: 30px;
@@ -30,6 +33,12 @@ margin-bottom: 30px;
 const Introduce=styled.h4`
 font-size: 30px;
 font-weight: 800;
+@media screen and (max-width: 974px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 20px;
+  }
 `
 const ContentWrap=styled.div`
 box-sizing: border-box;
@@ -41,6 +50,11 @@ width: 100%;
 padding: 20px;
 background-color: white;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+@media screen and (max-width: 630px) {
+  justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 `
 const Content=styled.div`
 display: flex;
@@ -49,9 +63,13 @@ align-content: center;
 
 `
 const ImgWrap=styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
 max-width: 300px;
 height:340px;
 width: 100%;
+min-width: 300px;
 `
 const Img=styled.img`
 width: 100%;
@@ -95,6 +113,14 @@ ${Dark}:hover {
     cursor: pointer;
   }
   animation: ${animation} 5s infinite;
+  @media screen and (max-width: 974px) {
+    height:60px;
+  }
+  @media screen and (max-width: 750px) {
+    width: 250px;
+    height:60px;
+    font-size: 14px;
+  }
 `
 const Box=styled.div`
 position: relative;
@@ -109,6 +135,13 @@ ${Dark}:hover {
     opacity: 0.8;
     cursor: pointer;
   }
+  @media screen and (max-width: 974px) {
+    height:60px;
+  }
+  @media screen and (max-width: 750px) {
+    width: 250px;
+    height:60px;
+  }
 `
 const Icon=styled.div`
 background-color: #1e74c7;
@@ -120,6 +153,11 @@ background-color: #1e74c7;
   justify-content: center;
   color: white;
   margin-right: 8px;
+  @media screen and (max-width: 974px) {
+    max-width: 74px;
+    width: 100%;
+  height: 70px;
+  }
 `
 const Font=styled.div`
 font-weight: 800;
@@ -132,6 +170,11 @@ const Title = styled.h1`
   margin: 0 auto;
 `;
 function Main2(){
+  const [OnModal, setOffModal] = useState(false);
+  const openModal = () => {
+    setOffModal(true);
+    console.log(OnModal);
+  };
     return(
         <Wrap>
             <IntroduceWrap>
@@ -144,7 +187,7 @@ function Main2(){
                 </ImgWrap>
                 <Content>
                     <BoxWrap>
-                        <AnimationBox>
+                        <AnimationBox onClick={openModal}>
                             <Icon>
                               <BsFillPersonFill size={"37px"}></BsFillPersonFill>
                             </Icon>
@@ -169,11 +212,15 @@ function Main2(){
                             <Icon>
                                 <BsGithub size={"35px"} />
                             </Icon>
-                            <Font>kny_7_@naver.com</Font>
+                            <div>
+                              <Font>kny_7_@naver.com</Font>
+                              <Font>contact 바로가기</Font>
+                            </div>
                         </Box>
                     </BoxWrap>
                 </Content>
             </ContentWrap>
+            {OnModal && <Modal setOffModal={setOffModal} />}
         </Wrap>
     )
 }

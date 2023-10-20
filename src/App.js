@@ -8,6 +8,7 @@ import Main from "./page/main";
 import About from "./page/about";
 import Modal from "./components/modal";
 import Main2 from "./page/main2"
+import Modal2 from './components/projectModal'
 
 import "./App.css";
 
@@ -18,31 +19,39 @@ import Skills from "./page/Skills";
 import Contact from "./page/contact";
 import Projects from "./page/project";
 
+const Wrap=styled.div`
+max-width: 1300px;
+width: 100%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+flex-direction:column;
+`
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
         <GlobalStyle />
         <Suspense fallback={<div>...loading</div>}>
+          <Wrap>
           <Header />
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  {/* <Main /> */}
                   <Main2></Main2>
                 </>
               }
             ></Route>
-            <Route
+            {/* <Route
               path="/about"
               element={
                 <>
                   <About />
                 </>
               }
-            ></Route>
+            ></Route> */}
             <Route
               path="/skills"
               element={
@@ -68,6 +77,7 @@ function App() {
               }
             ></Route>
           </Routes>
+          </Wrap>
         </Suspense>
       </ThemeProvider>
     </BrowserRouter>

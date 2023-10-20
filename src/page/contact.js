@@ -21,13 +21,23 @@ const ContactWrap=styled.div`
 margin: 0 auto;
 padding: 0;
 max-width: 1400px;
+width: 100%;
 box-sizing: border-box;
 /* border: 1px red solid; */
 display: flex;
 /* flex-direction: column; */
 justify-content: space-around;
+@media screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+    gap: 40px 12px;
+  }
+  /* @media screen and (max-width: 600px) {
+    max-width: 250px;
+    width: 100%;
+  } */
 `
 const CardBox=styled.div`
+box-sizing: border-box;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -38,14 +48,47 @@ width: 100%;
 background-color: white;
 justify-content: space-around;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+@media screen and (max-width: 1100px) {
+    max-width: 350px;
+    width: 100%;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: 900px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 500px;
+    width: 100%;
+    flex-direction: column;
+    height: 500px;
+    
+  }
+  
 `
 const ContactImg=styled.img`
-width:400px;
+max-width:400px;
+width: 100%;
 height: 250px;
+margin: 4px;
+@media screen and (max-width: 750px) {
+    max-width: 250px;
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    max-width:400px;
+    width: 100%;
+  }
 `
 const Title=styled.h3`
 font-size: 22px;
 font-weight: bold;
+@media screen and (max-width: 600px) {
+   font-size: 20px;
+  }
 `
 const UserInputBox=styled.div`
 box-sizing:border-box;
@@ -57,6 +100,14 @@ justify-content: space-evenly;
 max-width: 370px;
 width: 100%;
 height: 550px;
+@media screen and (max-width: 1100px) {
+    max-width: 290px;
+    width: 100%;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 400px;
+    width: 100%;
+  }
 `
 const UserInput=styled.input`
 box-sizing: border-box;
@@ -93,6 +144,18 @@ display: flex;
 align-items: center;
 `
 const GuestWrap=styled.div`
+`
+const Box=styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+line-height: 1.7;
+/* inline-size: auto; */
+@media screen and (max-width: 600px) {
+    font-size: 14px;
+    font-weight: 600;
+  }
 `
 function Contact(){
     //DB데이터 그냥 불러오기
@@ -153,9 +216,11 @@ function Contact(){
         <>
         <ContactWrap>
             <CardBox>
-                <Title>💌 Contact Me</Title>
-                <div>- 하고 싶은 피드백 혹은 메세지를 남겨주세요.</div>
-                <div>감사합니다 : )</div>
+                <Box>
+                    <Title>💌 Contact Me</Title>
+                    <div>- 하고 싶은 피드백 혹은 메세지를 남겨주세요.</div>
+                    <div>감사합니다 : )</div>
+                </Box>
                 <ContactImg src={ThanksImg}></ContactImg>
             </CardBox>
             <UserInputBox>
