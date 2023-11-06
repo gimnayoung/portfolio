@@ -176,7 +176,7 @@ function Projects(){
                     <Img src={Img1}></Img>
                 </ImgBox>
                 <Hh>
-                    <Text font_size={"18px"} color={"white"} font_weight={"700"}>개인 프로젝트</Text>
+                    <Text font_size={"18px"} color={"white"} font_weight={"700"}>팀 프로젝트</Text>
                 </Hh>
                 <Bot>
                     <Title>💡 프로젝트 타이쿤</Title>

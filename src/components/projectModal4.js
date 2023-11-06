@@ -4,9 +4,18 @@ import Img4 from "../img/stackover.png"
 import { useState } from "react";
 import Img5 from "../img/StackLogin.png"
 import Img6 from "../img/StackLogout.png"
-import nyoung1 from "../img/nyoung2.png"
-import nyoung2 from "../img/nyoung1.png"
+import nyoung1 from "../img/nyoung1.png"
+import nyoung2 from "../img/nyoung2.png"
 import nyoung3 from "../img/nyoung3.png"
+import webNyoung1 from "../img/webNyoung1.png"
+import webNyoung2 from "../img/webNyoung2.png"
+import webNyoung3 from "../img/webNyoung3.png"
+import webNyoung4 from "../img/webNyoung4.png"
+import mainNyoung from "../img/mainNyoung.png"
+import nyoung4 from "../img/nyoung4.png"
+import nyoung5 from "../img/nyoung5.png"
+import webNyoung5 from "../img/webNyoung5.png"
+import webNyoung6 from "../img/webNyoung6.png"
 
 import {AiOutlineCloseSquare} from 'react-icons/ai'
 const BlackWrap=styled.div`
@@ -15,8 +24,8 @@ const BlackWrap=styled.div`
     top: 0px;
     left: 0px;
     z-index: 100;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 `
 const ModalWrap = styled.div`
 display: flex;
@@ -24,7 +33,6 @@ flex-direction: column;
 transform: translate(-50%, -50%);
 z-index: 200;
   box-sizing: border-box;
-  border: 1px green solid;
   margin: 0 auto;
   width: 90%;
   height: 90%;
@@ -190,7 +198,7 @@ function ProjectModal3(props){
                 <ContentBox>
                     <Left>
                         <ImgWrap>
-                         <Img src={nyoung1}></Img>
+                         <Img src={mainNyoung}></Img>
                         </ImgWrap>
                         <FontBox>
                             <Font>💡 N-Young 쇼핑몰</Font>
@@ -204,10 +212,10 @@ function ProjectModal3(props){
                         </FontBox>
                         <FontBox>
                             <Font>🔎 바로가기</Font>
-                            <A href='https://gimnayoung.github.io/react/#/detail/2' fontSize={'14px'} color={'gray'}>N-Young</A>
+                            <A href='https://gimnayoung.github.io/react' fontSize={'14px'} color={'gray'}>N-Young</A>
                             <A href='https://github.com/codestates-seb/seb42_pre_037' fontSize={'14px'} color={'gray'}>Github</A>
-                            <A href='https://www.figma.com/file/tJO0cq3cc7qQpBeRNnbTHh/myStackoverflow?type=design&node-id=0-1&mode=design&t=ucZuc0EI1do7FnEH-0' fontSize={'14px'} color={'gray'}>Figma</A>
-                            <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A>
+                            <A href='https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0' fontSize={'14px'} color={'gray'}>Figma</A>
+                            {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
                         </FontBox>
                         <FontBox>
                             <Font>🔨 사용 스킬</Font>
@@ -237,27 +245,45 @@ function ProjectModal3(props){
                             <SmallLeft>
                              <Img src={nyoung1}></Img>
                             </SmallLeft>
+                            <SmallRight>
+                              <Img src={webNyoung1}></Img>
+                            </SmallRight>
                         </SmallWrap>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
                              <Img src={nyoung3}></Img>
                             </SmallLeft>
+                            <SmallRight>
+                              <Img src={webNyoung2}></Img>
+                            </SmallRight>
                         </SmallWrap>
                         <Font>👉 상품 디테일 페이지</Font>
                         <SubFont>-장바구니 아이콘 버튼을 클릭하면 LocalStorege 안에 저장할 수 있습니다.</SubFont>
-                        <SmallWrap borderBottom={'2px gray solid'} marginTop={'8px'}>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
                              <Img src={nyoung2}></Img>
                             </SmallLeft>
-                        </SmallWrap>
+                            <SmallRight>
+                              <Img src={webNyoung3}></Img>
+                            </SmallRight>
                         </SmallWrap>
                         <Font>👉 장바구니 & 찜 페이지</Font>
                         <SubFont>-LocalStorege 안에 장바구니와 최근본 상품들이 저장되어있고, 최근본 상품들은 최신순으로 정렬 했습니다.</SubFont>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
-                             <Img src={nyoung3}></Img>
+                             <Img src={nyoung4}></Img>
                             </SmallLeft>
+                            <SmallRight>
+                              <Img src={webNyoung5}></Img>
+                            </SmallRight>
+                        </SmallWrap>
+                        <SmallWrap marginTop={'4px'}>
+                            <SmallLeft>
+                             <Img src={nyoung5}></Img>
+                            </SmallLeft>
+                            <SmallRight>
+                              <Img src={webNyoung6}></Img>
+                            </SmallRight>
                         </SmallWrap>
                     </Right>
                 </ContentBox>
