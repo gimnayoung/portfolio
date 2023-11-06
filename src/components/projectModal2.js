@@ -204,14 +204,14 @@ function ProjectModal2(props){
                             <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A>
                         </FontBox>
                         <FontBox>
-                            <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>프론트엔드:4명</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>백엔드:3명</Font>
-                        </FontBox>
-                        <FontBox>
                             <Font>🙋‍♀️ 맡은 역할</Font>
                             <Font fontSize={'15px'} color={'#505050'}>Login&Logout Header</Font>
                             <Font fontSize={'15px'} color={'#505050'}>Nav</Font>
+                        </FontBox>
+                        <FontBox>
+                            <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>프론트엔드:4명</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>백엔드:3명</Font>
                         </FontBox>
                         <FontBox>
                             <Font>🔨 사용 스킬</Font>

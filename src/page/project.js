@@ -6,6 +6,8 @@ import Img4 from"../img/stackover.png"
 import ProjectModal2 from "../components/projectModal2"
 import ProjectModal3 from "../components/projectModal3";
 import nyoung1 from "../img/mainNyoung.png"
+import ProjectModal4 from "../components/projectModal4";
+import ProjecttycoonMain from "../img/projecttycoon.png"
 
 const ProjectWrap=styled.div`
 max-width: 1200px;
@@ -171,9 +173,9 @@ function Projects(){
                     </Hover>
                 </Black>
             </ProjectBox>
-            <ProjectBox>
+            <ProjectBox onClick={HandleModal4}>
                 <ImgBox>
-                    <Img src={Img1}></Img>
+                    <Img src={ProjecttycoonMain}></Img>
                 </ImgBox>
                 <Hh>
                     <Text font_size={"18px"} color={"white"} font_weight={"700"}>팀 프로젝트</Text>
@@ -267,9 +269,9 @@ function Projects(){
             {
              openModal3 && <ProjectModal3 setCloseModal3={setCloseModal3}></ProjectModal3>
             }
-            {/* {
-             openModal4 && <ProjectModal4 setCloseModal4={setCloseModal4}></ProjectModal2>
-            } */}
+            {
+             openModal4 && <ProjectModal4 setCloseModal4={setCloseModal4}></ProjectModal4>
+            }
             </Wrap>
             
         </ProjectWrap>

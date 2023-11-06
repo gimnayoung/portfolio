@@ -16,6 +16,14 @@ import nyoung4 from "../img/nyoung4.png"
 import nyoung5 from "../img/nyoung5.png"
 import webNyoung5 from "../img/webNyoung5.png"
 import webNyoung6 from "../img/webNyoung6.png"
+import projectMainImg from "../img/projecttycoon.png"
+import projectMainImg2 from "../img/projectMain.png.jpg"
+import newpage1 from "../img/newpage1.png"
+import newpage2 from "../img/newproject2.png"
+import mypage1 from "../img/mypage1.png"
+import mypage2 from "../img/mypage2.png"
+import mypage3 from "../img/mypage3.png"
+import mypage4 from "../img/mypage4.png"
 
 import {AiOutlineCloseSquare} from 'react-icons/ai'
 const BlackWrap=styled.div`
@@ -184,9 +192,9 @@ const A=styled.a`
 color:#505050;
 padding: 4px;
 `
-function ProjectModal3(props){
+function ProjectModal4(props){
     const HandleCloseModal=()=>{
-        props.setCloseModal3(false);
+        props.setCloseModal4(false);
     };
     return(
         <div>
@@ -198,24 +206,29 @@ function ProjectModal3(props){
                 <ContentBox>
                     <Left>
                         <ImgWrap>
-                         <Img src={mainNyoung}></Img>
+                         <Img src={projectMainImg}></Img>
                         </ImgWrap>
                         <FontBox>
-                            <Font>💡 N-Young 쇼핑몰</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>가지각색의 여러 쇼핑몰 사이트 안에서 즐겨찾는 의류 상품들을 모아놓아 이곳 저곳 찾아다닐 필요없이 한 눈에 볼 수 있는 나만의 쇼핑몰 프로젝트 입니다.</Font>
-                        </FontBox>
-                        <FontBox>
-                            <Font>🙋‍♀️ 페이지</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>메인 페이지</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>상품 디테일 페이지</Font>
-                            <Font fontSize={'15px'} color={'#505050'}>마이 페이지</Font>
+                            <Font>💡 ProjectTycoon</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>같은 학원 내에 다양한 교육과정을 배우고 있는 수강생을 위해 프로젝트를 개설 할 수 있는 플렛폼을 만든 사이트 입니다.</Font>
                         </FontBox>
                         <FontBox>
                             <Font>🔎 바로가기</Font>
-                            <A href='https://gimnayoung.github.io/react' fontSize={'14px'} color={'gray'}>N-Young</A>
+                            <A href='http://projecttycoon.com/' fontSize={'14px'} color={'gray'}>ProjectTycoon</A>
                             <A href='https://github.com/codestates-seb/seb42_pre_037' fontSize={'14px'} color={'gray'}>Github</A>
                             <A href='https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0' fontSize={'14px'} color={'gray'}>Figma</A>
                             {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
+                        </FontBox>
+                        <FontBox>
+                            <Font>🙋‍♀️ 페이지</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>랜딩 페이지(홈 페이지)</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>프로젝트 개설 페이지</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>마이페이지</Font>
+                        </FontBox>
+                        <FontBox>
+                            <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>프론트엔드:3명</Font>
+                            <Font fontSize={'15px'} color={'#505050'}>백엔드:6명</Font>
                         </FontBox>
                         <FontBox>
                             <Font>🔨 사용 스킬</Font>
@@ -223,7 +236,17 @@ function ProjectModal3(props){
                             <SkillWrap>
                                 <Skill>React</Skill>
                                 <Skill>Axios</Skill>
-                                <Skill>LocalStorege</Skill>
+                                <Skill>Styledcomponent</Skill>
+                                <Skill>Css</Skill>
+                                <Skill>Css</Skill>
+                            </SkillWrap>
+                            <Font fontSize={'15px'} color={'#505050'}>백엔드</Font>
+                            <SkillWrap>
+                                <Skill>Java</Skill>
+                                <Skill>Axios</Skill>
+                                <Skill>Styledcomponent</Skill>
+                                <Skill>Css</Skill>
+                                <Skill>Css</Skill>
                             </SkillWrap>
                         </FontBox>
                     </Left>
@@ -239,14 +262,14 @@ function ProjectModal3(props){
                                 <But>모바일</But>
                             </SmallRight>
                         </SmallWrap>
-                        <Font>👉 메인 페이지</Font>
-                        <SubFont>-상품더보기 버튼을 클릭하면 Axios를 이용해 상품들을 더 불러 올 수 있습니다.</SubFont>
+                        <Font>👉 랜딩 페이지(홈 페이지)</Font>
+                        <SubFont>-projecttycoon 의 첫 페이지 입니다.</SubFont>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
-                             <Img src={nyoung1}></Img>
+                             <Img src={projectMainImg}></Img>
                             </SmallLeft>
                             <SmallRight>
-                              <Img src={webNyoung1}></Img>
+                              <Img src={projectMainImg2}></Img>
                             </SmallRight>
                         </SmallWrap>
                         <SmallWrap marginTop={'4px'}>
@@ -257,32 +280,32 @@ function ProjectModal3(props){
                               <Img src={webNyoung2}></Img>
                             </SmallRight>
                         </SmallWrap>
-                        <Font>👉 상품 디테일 페이지</Font>
+                        <Font>👉 프로젝트 개설 페이지</Font>
                         <SubFont>-장바구니 아이콘 버튼을 클릭하면 LocalStorege 안에 저장할 수 있습니다.</SubFont>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
-                             <Img src={nyoung2}></Img>
+                             <Img src={newpage1}></Img>
                             </SmallLeft>
                             <SmallRight>
-                              <Img src={webNyoung3}></Img>
+                              <Img src={newpage2}></Img>
                             </SmallRight>
                         </SmallWrap>
-                        <Font>👉 장바구니 & 찜 페이지</Font>
-                        <SubFont>-LocalStorege 안에 장바구니와 최근본 상품들이 저장되어있고, 최근본 상품들은 최신순으로 정렬 했습니다.</SubFont>
+                        <Font>👉 마이페이지</Font>
+                        <SubFont>- .</SubFont>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
-                             <Img src={nyoung4}></Img>
+                             <Img src={mypage1}></Img>
                             </SmallLeft>
                             <SmallRight>
-                              <Img src={webNyoung5}></Img>
+                              <Img src={mypage3}></Img>
                             </SmallRight>
                         </SmallWrap>
                         <SmallWrap marginTop={'4px'}>
                             <SmallLeft>
-                             <Img src={nyoung5}></Img>
+                             <Img src={mypage2}></Img>
                             </SmallLeft>
                             <SmallRight>
-                              <Img src={webNyoung6}></Img>
+                              <Img src={mypage4}></Img>
                             </SmallRight>
                         </SmallWrap>
                     </Right>
@@ -291,4 +314,4 @@ function ProjectModal3(props){
         </div>
     )
 }
-export default ProjectModal3;
+export default ProjectModal4;
