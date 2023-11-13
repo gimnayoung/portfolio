@@ -5,6 +5,7 @@
 
 import { styled } from "styled-components";
 import { useEffect, useState } from "react";
+import { useTheme } from "../store/themeProvider";
 
 import GuestBook from"../components/guestBook"
 import ThanksImg from "../img/sendMessage3.jpg"
@@ -44,8 +45,8 @@ align-items: center;
 max-width: 440px;
 height: 550px;
 width: 100%;
-/* border: 1px red solid; */
-background-color: white;
+background-color: ${(props) =>
+    props.theme === "light" ? "white" : "#525252"};
 justify-content: space-around;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 @media screen and (max-width: 1100px) {
@@ -158,6 +159,7 @@ line-height: 1.7;
   }
 `
 function Contact(){
+  const ThemeMode = useTheme();
     //DB데이터 그냥 불러오기
     // useEffect(()=>{
     //     const getUsers= async()=>{
@@ -215,7 +217,7 @@ function Contact(){
     return(
         <>
         <ContactWrap>
-            <CardBox>
+            <CardBox theme={ThemeMode[0]} >
                 <Box>
                     <Title>💌 Contact Me</Title>
                     <div>- 하고 싶은 피드백 혹은 메세지를 남겨주세요.</div>

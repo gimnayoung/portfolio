@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import "../App.css";
+import { useTheme } from "../store/themeProvider";
 
 import Logo from "../img/logo.png";
 // import { Link, Router } from 'react-router-dom'
@@ -54,8 +55,14 @@ let NavBox = styled.div`
     max-width: 200px;
   }
 `;
+const A =styled.a`
+text-decoration: none;
+color: ${(props) =>
+    props.theme === "light" ? "black" : "white"};
+`
 
 function Header() {
+  const ThemeMode = useTheme();
   return (
     <HeaderWrap>
       <Wrap>
@@ -65,9 +72,9 @@ function Header() {
         <NavBox>
           {/* <a href='/'>HOME</a> */}
           {/* <a href='/about'>ABOUT</a> */}
-          <a href="/projects">PROJECTS</a>
-          <a href="/skills">SKILLS</a>
-          <a href="/contact">CONTACT</a>
+          <A theme={ThemeMode[0]} href="/projects">PROJECTS</A>
+          <A theme={ThemeMode[0]} href="/skills">SKILLS</A>
+          <A theme={ThemeMode[0]} href="/contact">CONTACT</A>
         </NavBox>
         <ToggleLayout></ToggleLayout>
       </Wrap>

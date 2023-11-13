@@ -1,4 +1,5 @@
 import { styled } from "styled-components"
+import { useTheme } from "../store/themeProvider";
 import Img1 from "../img/projectImg.png"
 import { useState } from "react";
 import ProjectModal from "../components/projectModal"
@@ -30,7 +31,8 @@ const ProjectBox=styled.div`
 max-width: 390px;
 width: 100%;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.3);
-/* border-radius: 20px; */
+background-color: ${(props) =>
+    props.theme === "light" ? "white" : "#525252"};
 position: relative;
 ${Black}:hover {
     opacity: 0.8;
@@ -90,15 +92,16 @@ gap:15px;
 `
 const Bot=styled.div`
 padding: 4px;
-height: 100px;
+height: 110px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 `
-const Span=styled.span`
+const Span=styled.div`
 font-size: 18px;
 color: gray;
 font-weight: 700;
+padding: 20px 0;
 @media screen and (max-width: 670px) {
     font-size: 15px;
   }
@@ -123,6 +126,7 @@ display: flex;
 
 `
 function Projects(){
+    const ThemeMode = useTheme();
     const [openModal, setCloseModal] = useState(false);
     const [openModal2,setCloseModal2] =useState(false);
     const [openModal3,setCloseModal3] =useState(false);
@@ -144,7 +148,7 @@ function Projects(){
         <ProjectWrap>
             <Span>📌 프로젝트를 클릭하시면 더 자세한 정보를 볼 수 있습니다.</Span>
             <Wrap>
-            <ProjectBox onClick={HandleModal}>
+            <ProjectBox theme={ThemeMode[0]} onClick={HandleModal}>
                 <ImgBox>
                     <Img src={Img1}></Img>
                 </ImgBox>
@@ -173,7 +177,7 @@ function Projects(){
                     </Hover>
                 </Black>
             </ProjectBox>
-            <ProjectBox onClick={HandleModal4}>
+            <ProjectBox theme={ThemeMode[0]} onClick={HandleModal4}>
                 <ImgBox>
                     <Img src={ProjecttycoonMain}></Img>
                 </ImgBox>
@@ -202,7 +206,7 @@ function Projects(){
                     </Hover>
                 </Black>
             </ProjectBox>
-            <ProjectBox onClick={HandleModal3}>
+            <ProjectBox theme={ThemeMode[0]} onClick={HandleModal3}>
                 <ImgBox>
                     <Img src={nyoung1}></Img>
                 </ImgBox>
@@ -231,7 +235,7 @@ function Projects(){
                     </Hover>
                 </Black>
             </ProjectBox>
-            <ProjectBox onClick={HandleModal2}>
+            <ProjectBox theme={ThemeMode[0]} onClick={HandleModal2}>
                 <ImgBox>
                     <Img src={Img4}></Img>
                 </ImgBox>

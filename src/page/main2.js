@@ -26,9 +26,10 @@ const Wrap = styled.div`
   box-sizing: border-box;
   max-width: 1200px;
   flex-direction: column;
+  /* align-items: center; */
 `;
 const IntroduceWrap = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 const Introduce = styled.h4`
   font-size: 30px;
@@ -173,6 +174,10 @@ const Title = styled.h1`
   font-weight: 800;
   margin: 0 auto;
 `;
+const A = styled.a`
+color: ${(props) =>
+    props.theme === "light" ? "black" : "white"};
+`
 function Main2() {
   const ThemeMode = useTheme();
   const [OnModal, setOffModal] = useState(false);
@@ -196,7 +201,7 @@ function Main2() {
               <Icon>
                 <BsFillPersonFill size={"37px"}></BsFillPersonFill>
               </Icon>
-              <Font>김나영 / Kim NaYoung</Font>
+              <Font>김나영 / Kim Nayoung</Font>
               <Dark>
                 <Span>클릭해 주세요.</Span>
               </Dark>
@@ -219,7 +224,7 @@ function Main2() {
               </Icon>
               <div>
                 <Font>kny_7_@naver.com</Font>
-                <a href="/">contact 바로가기</a>
+                <A theme={ThemeMode[0]} href="/">contact 바로가기</A>
               </div>
             </Box>
           </BoxWrap>

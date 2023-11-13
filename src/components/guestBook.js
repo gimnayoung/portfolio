@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { useEffect, useState } from "react";
-
+import { useTheme } from "../store/themeProvider";
 // import {db} from '../firebase/firebase-config'
 // import {collection,getDocs} from "firebase/firestore"
 
@@ -13,7 +13,8 @@ align-items: center;
 justify-content: space-around;
 max-width:395px;
 width:100%;
-background-color:white;
+background-color: ${(props) =>
+    props.theme === "light" ? "white" : "#525252"};
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   @media screen and (max-width: 1100px) {
@@ -60,6 +61,8 @@ const UserName=styled.div`
 font-size:13px;
 font-weight: 800;
 padding: 4px;
+color: ${(props) =>
+    props.theme === "light" ? "black" : "white"};
 `
 const UserTitle=styled.div`
 font-size: 14px;
@@ -79,6 +82,7 @@ color:gray;
 `
 
 function GuestBook(props){
+    const ThemeMode = useTheme();
     // const id = 1;
     // const usersCollectionRef =collection(db,"users");
 
@@ -102,7 +106,7 @@ function GuestBook(props){
      const [color,setColor]=useState(['#93BFCF','#BDCDD6',"#EEE9DA"])
    
     return(
-        <GuestBookWrap>
+        <GuestBookWrap theme={ThemeMode[0]}>
             <Title>📝 Guest Book</Title>
             <UserSayBox>
                 {/* <New>새로고침을 눌러주세요.</New> 
@@ -117,7 +121,7 @@ function GuestBook(props){
                                  <UserTitle color="white">비밀 글 입니다. </UserTitle>
                                 </>) : (
                                 <>
-                                <UserName>{list.name}</UserName>
+                                <UserName theme={ThemeMode[0]}>{list.name}</UserName>
                                 <UserTitle>{list.title}</UserTitle>
                                 <UserMessage>{list.message}</UserMessage>
                                 </>)
