@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../store/themeProvider";
 import styled, { keyframes } from "styled-components";
-import AboutImg from "../img/aboutimg.jpg";
 import Modal from "../components/modal";
 import MainNy from "../img/nymain.jpg";
+import Main3 from "../page/main3"
 
 import { BsFillPersonFill } from "react-icons/bs";
 import ToggleLayout from "../components/toggleLayout";
@@ -178,6 +178,10 @@ const Title = styled.h1`
 const A = styled.a`
   color: ${(props) => (props.theme === "light" ? "black" : "white")};
 `;
+const Main3Wrap=styled.div`
+width: 100vw;
+background-color: yellowgreen;
+`
 function Main2() {
   const ThemeMode = useTheme();
   const [OnModal, setOffModal] = useState(false);
@@ -186,6 +190,7 @@ function Main2() {
     console.log(OnModal);
   };
   return (
+    <>
     <Wrap>
       <IntroduceWrap>
         <Introduce>안녕하세요 :)</Introduce>
@@ -233,7 +238,9 @@ function Main2() {
         </Content>
       </ContentWrap>
       {OnModal && <Modal setOffModal={setOffModal} />}
+     <Main3></Main3>
     </Wrap>
+  </>
   );
 }
 export default Main2;

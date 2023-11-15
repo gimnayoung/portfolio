@@ -209,6 +209,31 @@ function ProjectModal3(props) {
               </Font>
             </FontBox>
             <FontBox>
+              <Font>🔎 바로가기</Font>
+              <A
+                href="https://gimnayoung.github.io/react"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                N-Young
+              </A>
+              <A
+                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Figma
+              </A>
+              <A
+                href="https://github.com/codestates-seb/seb42_pre_037"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Github
+              </A>
+              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
+            </FontBox>
+            <FontBox>
               <Font>🙋‍♀️ 페이지</Font>
               <Font fontSize={"15px"} color={"#505050"}>
                 메인 페이지
@@ -219,31 +244,6 @@ function ProjectModal3(props) {
               <Font fontSize={"15px"} color={"#505050"}>
                 마이 페이지
               </Font>
-            </FontBox>
-            <FontBox>
-              <Font>🔎 바로가기</Font>
-              <A
-                href="https://gimnayoung.github.io/react"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                N-Young
-              </A>
-              <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Github
-              </A>
-              <A
-                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Figma
-              </A>
-              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
             </FontBox>
             <FontBox>
               <Font>🔨 사용 스킬</Font>
@@ -277,7 +277,7 @@ function ProjectModal3(props) {
             </SmallWrap>
             <Font>👉 메인 페이지</Font>
             <SubFont>
-              -상품더보기 버튼을 클릭하면 Axios를 이용해 상품들을 더 불러 올 수
+              -상품 더보기 버튼을 클릭하면 Axios의 Get메소드를 이용해 상품들을 더 불러 올 수
               있습니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
@@ -298,8 +298,7 @@ function ProjectModal3(props) {
             </SmallWrap>
             <Font>👉 상품 디테일 페이지</Font>
             <SubFont>
-              -장바구니 아이콘 버튼을 클릭하면 LocalStorege 안에 저장할 수
-              있습니다.
+              -장바구니 아이콘 버튼을 클릭하면 LocalStorege안에 장바구니 공간에 저장이 됩니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
@@ -311,8 +310,13 @@ function ProjectModal3(props) {
             </SmallWrap>
             <Font>👉 장바구니 & 찜 페이지</Font>
             <SubFont>
-              -LocalStorege 안에 장바구니와 최근본 상품들이 저장되어있고, 최근본
-              상품들은 최신순으로 정렬 했습니다.
+              -LocalStorege의 장바구니 저장공간에서 꺼내와 장바구니 상품들을 볼 수 있습니다.
+            </SubFont>
+            <SubFont>
+              -장바구니 상품들은 삭제가 가능합니다.
+            </SubFont>
+            <SubFont>
+            -LocalStorege안에 최근 본 상품들이 저장 되어있고, 최신순으로 정렬 하여 볼 수 있습니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>

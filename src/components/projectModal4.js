@@ -225,18 +225,18 @@ function ProjectModal4(props) {
                 ProjectTycoon
               </A>
               <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Github
-              </A>
-              <A
                 href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
+              </A>
+              <A
+                href="https://github.com/codestates-seb/seb42_pre_037"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Github
               </A>
               {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
             </FontBox>
@@ -298,7 +298,8 @@ function ProjectModal4(props) {
               </SmallRight>
             </SmallWrap>
             <Font>👉 랜딩 페이지(홈 페이지)</Font>
-            <SubFont>-projecttycoon 의 첫 페이지 입니다.</SubFont>
+            <SubFont>-projecttycoon의 첫페이지 이며, 애니메이션을 추가하여 생동감있는 페이지를 구현했습니다.</SubFont>
+            <SubFont>-반응형 웹 사이트 입니다.</SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
                 <Img src={projectMainImg}></Img>
@@ -307,18 +308,15 @@ function ProjectModal4(props) {
                 <Img src={projectMainImg2}></Img>
               </SmallRight>
             </SmallWrap>
-            <SmallWrap marginTop={"4px"}>
-              <SmallLeft>
-                <Img src={nyoung3}></Img>
-              </SmallLeft>
-              <SmallRight>
-                <Img src={webNyoung2}></Img>
-              </SmallRight>
-            </SmallWrap>
             <Font>👉 프로젝트 개설 페이지</Font>
             <SubFont>
-              -장바구니 아이콘 버튼을 클릭하면 LocalStorege 안에 저장할 수
-              있습니다.
+              -외주 맡겨 디테일이 더해진 기본이미지 3장을 선택하거나 원하는 이미지를 넣을 수 있습니다.
+            </SubFont>
+            <SubFont>
+            -FileReader를 통해 이미지 미리보기가 가능합니다.
+            </SubFont>
+            <SubFont>
+            -Axios의 Post메소드를 이용해 이미지와 프로젝트 정보들을 백엔드와 협업하였습니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
@@ -329,7 +327,8 @@ function ProjectModal4(props) {
               </SmallRight>
             </SmallWrap>
             <Font>👉 마이페이지</Font>
-            <SubFont>- .</SubFont>
+            <SubFont>- 내 프로필 수정과 활동관리를 볼 수 있는 페이지 입니다.</SubFont>
+            <SubFont>- Axios의 Put메소드를 이용하여 회원 정보를 수정 할 수 있게끔 백엔드와 협업하였습니다.</SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
                 <Img src={mypage1}></Img>

@@ -9,6 +9,7 @@ import About from "./page/about";
 import Modal from "./components/modal";
 import Main2 from "./page/main2"
 import Modal2 from './components/projectModal'
+import Main3 from "./page/main3"
 
 import "./App.css";
 
@@ -28,6 +29,9 @@ align-items: center;
 justify-content: center;
 flex-direction:column;
 `
+const Hidden =styled.div`
+overflow-x:hidden;
+`
 function App() {
   return (
     <BrowserRouter>
@@ -40,9 +44,10 @@ function App() {
             <Route
               path="/"
               element={
-                <>
+                <div>
                   <Main2></Main2>
-                </>
+                  {/* <Main3></Main3> */}
+                </div>
               }
             ></Route>
             {/* <Route

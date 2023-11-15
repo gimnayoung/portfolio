@@ -203,18 +203,18 @@ function ProjectModal2(props) {
                 * 배포하였으나 기간이 만료 되었습니다.
               </Font>
               <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Github
-              </A>
-              <A
                 href="https://www.figma.com/file/tJO0cq3cc7qQpBeRNnbTHh/myStackoverflow?type=design&node-id=0-1&mode=design&t=ucZuc0EI1do7FnEH-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
+              </A>
+              <A
+                href="https://github.com/codestates-seb/seb42_pre_037"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Github
               </A>
               <A
                 href="https://documenter.getpostman.com/view/24686427/2s93CGSbPy"

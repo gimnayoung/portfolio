@@ -72,14 +72,14 @@ const Text = styled.div`
   font-weight: ${(props) => props.font_weight};
 `;
 const SkillBox = styled.div`
-  width: ${(props) => props.width || "56px"};
+margin-right: 4px;
   height: 18px;
   background-color: #1e74c7;
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 4px 12px;
 `;
 const Wrap = styled.div`
   display: flex;
@@ -163,11 +163,11 @@ function Projects() {
               <SkillBox>
                 <Text color={"white"}>React</Text>
               </SkillBox>
-              <SkillBox width={"72px"}>
-                <Text color={"white"}>Firebase</Text>
+              <SkillBox>
+                <Text color={"white"}>Axios</Text>
               </SkillBox>
-              <SkillBox width={"140px"}>
-                <Text color={"white"}>Styledcomponent</Text>
+              <SkillBox>
+                <Text color={"white"}>StyledComponent</Text>
               </SkillBox>
             </SkillWrap>
           </Bot>
@@ -196,7 +196,7 @@ function Projects() {
                 <Text color={"white"}>Firebase</Text>
               </SkillBox>
               <SkillBox width={"140px"}>
-                <Text color={"white"}>Styledcomponent</Text>
+                <Text color={"white"}>StyledComponent</Text>
               </SkillBox>
             </SkillWrap>
           </Bot>

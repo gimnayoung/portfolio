@@ -7,7 +7,6 @@ import { styled } from "styled-components";
 import Typing1 from "../components/typing1";
 import Typing2 from "../components/typing2";
 import Test from "../components/test";
-import MainImg from "../img/mainimg.jpg";
 import ToggleLayout from "../components/toggleLayout";
 import Button from "../components/button";
 import Header from "../components/header";

@@ -3,6 +3,10 @@ import Img1 from "../img/projectImg.png";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { useState } from "react";
 import img2 from "../img/portfolio2.png";
+import img3 from "../img/port2.png"
+import img4 from "../img/port3.png"
+import img5 from "../img/port4.png"
+import img6 from "../img/port5.png"
 
 const BlackWrap = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
@@ -194,6 +198,31 @@ function ProjectModal(props) {
               </Font>
             </FontBox>
             <FontBox>
+              <Font>🔎 바로가기</Font>
+              <A
+                href="https://gimnayoung.github.io/react"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                포트폴리오
+              </A>
+              <A
+                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Figma
+              </A>
+              <A
+                href="https://github.com/codestates-seb/seb42_pre_037"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                Github
+              </A>
+              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
+            </FontBox>
+            <FontBox>
               <Font>🙋‍♀️ 페이지</Font>
               <Font fontSize={"15px"} color={"#505050"}>
                 홈 페이지
@@ -209,31 +238,6 @@ function ProjectModal(props) {
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔎 바로가기</Font>
-              <A
-                href="https://gimnayoung.github.io/react"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                PortFolio
-              </A>
-              <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Github
-              </A>
-              <A
-                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
-                fontSize={"14px"}
-                color={"gray"}
-              >
-                Figma
-              </A>
-              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
-            </FontBox>
-            <FontBox>
               <Font>🔨 사용 스킬</Font>
               <Font fontSize={"15px"} color={"#505050"}>
                 프론트엔드
@@ -241,7 +245,14 @@ function ProjectModal(props) {
               <SkillWrap>
                 <Skill>React</Skill>
                 <Skill>Axios</Skill>
+                <Skill>StyledComponent</Skill>
                 <Skill>LocalStorege</Skill>
+              </SkillWrap>
+              <Font fontSize={"15px"} color={"#505050"}>
+                DB
+              </Font>
+              <SkillWrap>
+                <Skill>FireBase</Skill>
               </SkillWrap>
               <Font fontSize={"15px"} color={"#505050"}>
                 배포
@@ -263,10 +274,15 @@ function ProjectModal(props) {
                 <But>모바일</But>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 메인 페이지</Font>
+            <Font>👉 홈 페이지</Font>
             <SubFont>
-              -상품더보기 버튼을 클릭하면 Axios를 이용해 상품들을 더 불러 올 수
-              있습니다.
+              -Styled Commnent의 ThemeProvider를 이용하여 다트모드를 적용시킨 홈 페이지 입니다.
+            </SubFont>
+            <SubFont>
+            -Localstorage를 통해 테마 모드 유지가 가능합니다.
+            </SubFont>
+            <SubFont>
+            -반응형 웹 사이트 입니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
@@ -276,31 +292,21 @@ function ProjectModal(props) {
                 <Img src={img2}></Img>
               </SmallRight>
             </SmallWrap>
-            <SmallWrap marginTop={"4px"}>
-              <SmallLeft>
-                <Img src={Img1}></Img>
-              </SmallLeft>
-              <SmallRight>
-                <Img src={Img1}></Img>
-              </SmallRight>
-            </SmallWrap>
-            <Font>👉 상품 디테일 페이지</Font>
+            <Font>👉 프로젝트 페이지</Font>
             <SubFont>
-              -장바구니 아이콘 버튼을 클릭하면 LocalStorege 안에 저장할 수
-              있습니다.
+              -프로젝트를 클릭하시면 자세한 정보 창을 볼 수 있습니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
-                <Img src={Img1}></Img>
+                <Img src={img3}></Img>
               </SmallLeft>
               <SmallRight>
-                <Img src={Img1}></Img>
+                <Img src={img4}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 장바구니 & 찜 페이지</Font>
+            <Font>👉 스킬 페이지</Font>
             <SubFont>
-              -LocalStorege 안에 장바구니와 최근본 상품들이 저장되어있고, 최근본
-              상품들은 최신순으로 정렬 했습니다.
+              - 사용해보거나 경험해본 적 있는 스킬들을 정리해둔 페이지 입니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
@@ -316,6 +322,21 @@ function ProjectModal(props) {
               </SmallLeft>
               <SmallRight>
                 <Img src={Img1}></Img>
+              </SmallRight>
+            </SmallWrap>
+            <Font>👉 콘텍트 페이지</Font>
+            <SubFont>
+              - 게스트 방명록 페이지 입니다.
+            </SubFont>
+            <SubFont>
+            - FireBase의 DB를 이용하여 데이터가 저장되고 보여집니다. 삭제와 비밀글 쓰기가 가능합니다.
+            </SubFont>
+            <SmallWrap marginTop={"4px"}>
+              <SmallLeft>
+                <Img src={img5}></Img>
+              </SmallLeft>
+              <SmallRight>
+                <Img src={img6}></Img>
               </SmallRight>
             </SmallWrap>
           </Right>
@@ -325,99 +346,3 @@ function ProjectModal(props) {
   );
 }
 export default ProjectModal;
-// function ProjectModal(props){
-//     const HandleCloseModal=()=>{
-//         props.setCloseModal(false);
-//     };
-//     return(
-//         <div>
-//             <BlackWrap onClick={HandleCloseModal}></BlackWrap>
-//             <ModalWrap>
-//                 <CloseBox onClick={HandleCloseModal}>
-//                     닫기
-//                 </CloseBox>
-//                 <ContentBox>
-//                     <Left>
-//                         <ImgWrap>
-//                          <Img src={Img1}></Img>
-//                         </ImgWrap>
-//                         <FontBox>
-//                             <Font>💡 프로젝트 타이쿤</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>코리아IT학원에 다니는 분들이 프로젝트를 개설하기 위해 이용 할 수 있는 사이트 입니다.</Font>
-//                         </FontBox>
-//                         <FontBox>
-//                             <Font>🔎 바로가기</Font>
-//                             <a href='#' fontSize={'14px'} color={'gray'}>ProjectTycoon</a>
-//                             <a href='#' fontSize={'14px'} color={'gray'}>깃허브</a>
-//                         </FontBox>
-//                         <FontBox>
-//                             <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>프론트엔드:3명</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>백엔드:6명</Font>
-//                         </FontBox>
-//                         <FontBox>
-//                             <Font>🙋‍♀️ 맡은 역할</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>랜딩페이지</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>프로젝트 개설 페이지</Font>
-//                             <Font fontSize={'15px'} color={'#505050'}>마이페이지</Font>
-//                         </FontBox>
-//                         <FontBox>
-//                             <Font>🔨 사용 스킬</Font>
-//                             <Font>프론트엔드</Font>
-//                             <Font>백엔드</Font>
-//                         </FontBox>
-//                     </Left>
-//                     <Right>
-//                         <TitleBox>
-//                             <Font>맡은 페이지 & 사용 기술</Font>
-//                         </TitleBox>
-//                         <SmallWrap>
-//                             <SmallLeft>
-//                                 <But>데스크탑</But>
-//                             </SmallLeft>
-//                             <SmallRight>
-//                                 <But>모바일</But>
-//                             </SmallRight>
-//                         </SmallWrap>
-//                         <Font>👉 랜딩페이지</Font>
-//                         <SubFont>-애니메이션 라이브러리를 사용했습니다.</SubFont>
-//                         <SubFont>-게임형태의 4픽셀 컨셉으로 팀 전체의 색깔을 나타나게하려고 했습니다.</SubFont>
-//                         <SmallWrap borderBottom={'2px gray solid'} marginTop={'8px'}>
-//                             <SmallLeft>
-//                                 <Page>사진자리</Page>
-//                             </SmallLeft>
-//                             <SmallRight>
-//                                 <Page>사진자리</Page>
-//                             </SmallRight>
-//                         </SmallWrap>
-//                         <Font>👉 프로젝트 개설 페이지</Font>
-//                         <SubFont>-사용자가 원하는 프로젝트 메인 이미지를 넣을 수 있습니다.</SubFont>
-//                         <SubFont>-라이브러리를 통해 코드컨벤션,글씨크기,색깔 등을 변경 하여 내용을 작성할 수 있습니다.</SubFont>
-//                         <SubFont>-프로젝트의 기본 정보를 넣을 수 있습니다.</SubFont>
-//                         <SmallWrap borderBottom={'2px gray solid'} marginTop={'8px'}>
-//                             <SmallLeft>
-//                                 <Page>사진자리</Page>
-//                             </SmallLeft>
-//                             <SmallRight>
-//                                 <Page>사진자리</Page>
-//                             </SmallRight>
-//                         </SmallWrap>
-//                         <Font>👉 마이 페이지</Font>
-//                         <SubFont>-사이트 내에서 제공하는 프로필 사진을 정 할 수 있습니다.</SubFont>
-//                         <SubFont>-사용자의 개인정보들을 변경 할 수 있습니다.</SubFont>
-//                         <SubFont>-사용자가 게시한 글과 작성한 댓글을 볼 수 있습니다.</SubFont>
-//                         <SmallWrap borderBottom={'2px gray solid'} marginTop={'8px'}>
-//                             <SmallLeft>
-//                                 <Page>동영상자리</Page>
-//                             </SmallLeft>
-//                             <SmallRight>
-//                                 <Page>동영상자리</Page>
-//                             </SmallRight>
-//                         </SmallWrap>
-//                     </Right>
-//                 </ContentBox>
-//             </ModalWrap>
-//         </div>
-//     )
-// }
-// export default ProjectModal;
