@@ -78,7 +78,8 @@ justify-content: space-around;
 `
 const Solid = styled.div`
 width:100%;
-border:1px red solid;
+margin-top: 50px;
+border-top: 3px #93BFCF dashed;
 `
 function Skills(){
     const FrontSkills=[
@@ -106,7 +107,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>HTML</Title>
-                        <div>html 를 사용한 경험이 있습니다.</div>
+                        <div>HTML를 공부하고 있습니다.</div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -115,7 +116,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>CSS</Title>
-                        <div>html, jS , react 등 프로젝트를 진행할때 사용한 경험이있습니다.</div>
+                        <div>CSS를 이용하여 애니메이션 등 사용한 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -132,8 +133,8 @@ function Skills(){
                         <SiStyledcomponents size={87} color="white"/>
                     </Icon>
                     <TextBox>
-                        <Title>Styledcomponents</Title>
-                        <div>스타일드컴포넌트를 사용하여 프로젝트 제작 경험이 있고, 유연하게 다룰 수 있습니다.</div>
+                        <Title>StyledComponents</Title>
+                        <div>StyledComponents를 사용하여 프로젝트 제작 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -142,7 +143,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>TailWind</Title>
-                        <div>테일윈드를 사용하여 프로젝트를 한 경험이 있습니다</div>
+                        <div>TailWind를 사용하여 프로젝트 제작 경험이 있습니다</div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -151,7 +152,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>FireBase</Title>
-                        <div>firebase 사용하여 개인프로젝트때 DB를 해결하였습니다</div>
+                        <div>FireBase 사용하여 개인 프로젝트때 DB 문제를 해결한 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
             </Top>
@@ -164,7 +165,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>Github</Title>
-                        <div>깃허브를 이용하여</div>
+                        <div>팀 프로젝트때 Github를 이용하여 브랜치 공유와 병합, 협업을 한 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -173,7 +174,7 @@ function Skills(){
                 </Icon>
                 <TextBox>
                     <Title>GithubPage</Title>
-                    <div>깃허브 페이지를 이용하여 배포를 한 경험이 있습니다.</div>
+                    <div>GithubPage를 이용하여 개인 프로젝트 배포를 한 경험이 있습니다.</div>
                 </TextBox>
                 </SkillBox>
                 <SkillBox>
@@ -182,7 +183,7 @@ function Skills(){
                     </Icon>
                     <TextBox>
                         <Title>Figma</Title>
-                        <div>피그마를 사용하며 기본레이아웃과 제작한 경험이있습니다. </div>
+                        <div>피그마를 사용하며 프로젝트를 만들기 전 기본 레이아웃을 제작한 경험이있습니다. </div>
                     </TextBox>
                 </SkillBox>
                 <SkillBox>

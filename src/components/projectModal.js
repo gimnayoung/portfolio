@@ -7,6 +7,7 @@ import img3 from "../img/port2.png"
 import img4 from "../img/port3.png"
 import img5 from "../img/port4.png"
 import img6 from "../img/port5.png"
+import img7 from "../img/port6.png"
 
 const BlackWrap = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
@@ -310,15 +311,7 @@ function ProjectModal(props) {
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
-                <Img src={Img1}></Img>
-              </SmallLeft>
-              <SmallRight>
-                <Img src={Img1}></Img>
-              </SmallRight>
-            </SmallWrap>
-            <SmallWrap marginTop={"4px"}>
-              <SmallLeft>
-                <Img src={Img1}></Img>
+                <Img src={img7}></Img>
               </SmallLeft>
               <SmallRight>
                 <Img src={Img1}></Img>
