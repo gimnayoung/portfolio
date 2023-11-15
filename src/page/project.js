@@ -223,11 +223,14 @@ function Projects() {
               <SkillBox>
                 <Text color={"white"}>React</Text>
               </SkillBox>
-              <SkillBox width={"72px"}>
+              <SkillBox>
                 <Text color={"white"}>Axios</Text>
               </SkillBox>
-              <SkillBox width={"140px"}>
+              <SkillBox>
                 <Text color={"white"}>LocalStorege</Text>
+              </SkillBox>
+              <SkillBox >
+                <Text color={"white"}>StyledComponent</Text>
               </SkillBox>
             </SkillWrap>
           </Bot>

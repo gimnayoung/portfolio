@@ -1,10 +1,9 @@
 import { styled } from "styled-components";
 import "../App.css";
 import { useTheme } from "../store/themeProvider";
-
 import Logo from "../img/logo.png";
-// import { Link, Router } from 'react-router-dom'
 import ToggleLayout from "../components/toggleLayout";
+import { useNavigate } from "react-router-dom";
 
 let HeaderWrap = styled.div`
   height: 72px;
@@ -26,6 +25,7 @@ let LogoImg = styled.img`
   max-width: 100px;
   width: 100%;
   height: 50px;
+  cursor: pointer;
   @media screen and (max-width: 670px) {
     max-width: 80px;
     width: 100%;
@@ -56,28 +56,39 @@ let NavBox = styled.div`
   }
 `;
 const A = styled.a`
+ cursor: pointer;
   text-decoration: none;
   color: ${(props) => (props.theme === "light" ? "black" : "white")};
 `;
 
 function Header() {
+  let navigate = useNavigate();
   const ThemeMode = useTheme();
   return (
     <HeaderWrap>
       <Wrap>
-        <a href="/">
+        <a onClick={() => {
+            navigate("/");
+          }}>
           <LogoImg src={Logo}></LogoImg>
         </a>
         <NavBox>
-          {/* <a href='/'>HOME</a> */}
-          {/* <a href='/about'>ABOUT</a> */}
-          <A theme={ThemeMode[0]} href="/projects">
+          <A theme={ThemeMode[0]} 
+          onClick={() => {
+            navigate("/projects");
+          }}>
             PROJECTS
           </A>
-          <A theme={ThemeMode[0]} href="/skills">
+          <A theme={ThemeMode[0]} 
+          onClick={() => {
+            navigate("/skills");
+          }}>
             SKILLS
           </A>
-          <A theme={ThemeMode[0]} href="/contact">
+          <A theme={ThemeMode[0]} 
+           onClick={() => {
+            navigate("/contact");
+          }}>
             CONTACT
           </A>
         </NavBox>

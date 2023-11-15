@@ -254,6 +254,7 @@ function ProjectModal3(props) {
                 <Skill>React</Skill>
                 <Skill>Axios</Skill>
                 <Skill>LocalStorege</Skill>
+                <Skill>StyledComponent</Skill>
               </SkillWrap>
               <Font fontSize={"15px"} color={"#505050"}>
                 배포

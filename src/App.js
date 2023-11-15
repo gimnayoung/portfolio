@@ -1,6 +1,7 @@
 import React from "react";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Footer from "./components/footer";
 import Header from "./components/header";
@@ -34,7 +35,7 @@ overflow-x:hidden;
 `
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <ThemeProvider>
         <GlobalStyle />
         <Suspense fallback={<div>...loading</div>}>
@@ -86,7 +87,7 @@ function App() {
           </Wrap>
         </Suspense>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

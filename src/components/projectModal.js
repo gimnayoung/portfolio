@@ -201,7 +201,7 @@ function ProjectModal(props) {
             <FontBox>
               <Font>🔎 바로가기</Font>
               <A
-                href="https://gimnayoung.github.io/react"
+                href="https://gimnayoung.github.io/portfolio/"
                 fontSize={"14px"}
                 color={"gray"}
               >

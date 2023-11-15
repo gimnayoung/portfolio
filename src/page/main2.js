@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 import Modal from "../components/modal";
 import MainNy from "../img/nymain.jpg";
 import Main3 from "../page/main3"
+import { useNavigate } from "react-router-dom";
 
 import { BsFillPersonFill } from "react-icons/bs";
 import ToggleLayout from "../components/toggleLayout";
@@ -183,6 +184,7 @@ width: 100vw;
 background-color: yellowgreen;
 `
 function Main2() {
+  let navigate = useNavigate();
   const ThemeMode = useTheme();
   const [OnModal, setOffModal] = useState(false);
   const openModal = () => {
@@ -229,7 +231,10 @@ function Main2() {
               </Icon>
               <div>
                 <Font>kny_7_@naver.com</Font>
-                <A theme={ThemeMode[0]} href="/">
+                <A 
+                onClick={() => {
+                  navigate("/contact");
+                }}theme={ThemeMode[0]}>
                   contact 바로가기
                 </A>
               </div>
