@@ -8,7 +8,7 @@ import ToggleLayout from "../components/toggleLayout";
 
 let HeaderWrap = styled.div`
   height: 72px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   width: 100%;
 `;
 let Wrap = styled.div`
@@ -55,11 +55,10 @@ let NavBox = styled.div`
     max-width: 200px;
   }
 `;
-const A =styled.a`
-text-decoration: none;
-color: ${(props) =>
-    props.theme === "light" ? "black" : "white"};
-`
+const A = styled.a`
+  text-decoration: none;
+  color: ${(props) => (props.theme === "light" ? "black" : "white")};
+`;
 
 function Header() {
   const ThemeMode = useTheme();
@@ -72,9 +71,15 @@ function Header() {
         <NavBox>
           {/* <a href='/'>HOME</a> */}
           {/* <a href='/about'>ABOUT</a> */}
-          <A theme={ThemeMode[0]} href="/projects">PROJECTS</A>
-          <A theme={ThemeMode[0]} href="/skills">SKILLS</A>
-          <A theme={ThemeMode[0]} href="/contact">CONTACT</A>
+          <A theme={ThemeMode[0]} href="/projects">
+            PROJECTS
+          </A>
+          <A theme={ThemeMode[0]} href="/skills">
+            SKILLS
+          </A>
+          <A theme={ThemeMode[0]} href="/contact">
+            CONTACT
+          </A>
         </NavBox>
         <ToggleLayout></ToggleLayout>
       </Wrap>

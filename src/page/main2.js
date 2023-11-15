@@ -8,6 +8,7 @@ import MainNy from "../img/nymain.jpg";
 import { BsFillPersonFill } from "react-icons/bs";
 import ToggleLayout from "../components/toggleLayout";
 import { LiaBirthdayCakeSolid } from "react-icons/lia";
+import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineHome } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 // import {HiOutlineMail} from 'react-icons/hi'
@@ -175,9 +176,8 @@ const Title = styled.h1`
   margin: 0 auto;
 `;
 const A = styled.a`
-color: ${(props) =>
-    props.theme === "light" ? "black" : "white"};
-`
+  color: ${(props) => (props.theme === "light" ? "black" : "white")};
+`;
 function Main2() {
   const ThemeMode = useTheme();
   const [OnModal, setOffModal] = useState(false);
@@ -220,11 +220,13 @@ function Main2() {
             </Box>
             <Box>
               <Icon>
-                <BsGithub size={"35px"} />
+                <MdOutlineEmail size={"35px"} />
               </Icon>
               <div>
                 <Font>kny_7_@naver.com</Font>
-                <A theme={ThemeMode[0]} href="/">contact 바로가기</A>
+                <A theme={ThemeMode[0]} href="/">
+                  contact 바로가기
+                </A>
               </div>
             </Box>
           </BoxWrap>
