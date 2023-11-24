@@ -177,6 +177,8 @@ const Title = styled.h1`
   margin: 0 auto;
 `;
 const A = styled.a`
+text-decoration: underline;
+cursor: pointer;
   color: ${(props) => (props.theme === "light" ? "black" : "white")};
 `;
 const Main3Wrap=styled.div`

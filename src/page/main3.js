@@ -8,6 +8,7 @@ const Font2 =styled.div`
 font-size: ${(props) => props.font_size || "24px;"};
 font-weight: ${(props) => props.font_weight || "700;"};
 padding: 4px 0;
+
 `
 const Wrap=styled.div`
 border-top: 3px #93BFCF dashed;
@@ -25,19 +26,47 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 margin-bottom: 12px;
+@media screen and (max-width: 600px) {
+  display: flex;
+  flex-direction:column;
+  margin-bottom: 30px;
+  }
 `
 const SmallBox=styled.div`
 width:65%;
+@media screen and (max-width: 600px) {
+  width:100%;
+  }
+`
+const Title=styled.div`
+font-size: ${(props) => props.font_size || "24px;"};
+font-weight: ${(props) => props.font_weight || "700;"};
+padding: 4px 0;
+@media screen and (max-width: 950px) {
+  font-size:22px;
+  }
+@media screen and (max-width: 700px) {
+  font-size:20px;
+  }
+  @media screen and (max-width: 600px) {
+  font-size:18px;
+  }
+`
+const SmallBox2=styled.div`
+min-width: 290px;
+ @media screen and (max-width: 600px) {
+  min-width: 260px;
+  }
 `
 function Main3() {
   return <Wrap>
     <MainWrap>
       <Font>EDUCATION</Font>
       <Box>
-        <div>
-          <Font2>코리아IT 아카데미(오프라인)</Font2>
+        <SmallBox2>
+          <Title>코리아IT 아카데미(오프라인)</Title>
           <Font2 font_size={'20px'}>2023.04.10 - 2023.07.14</Font2>
-        </div>
+        </SmallBox2>
         <SmallBox>
           <Font2  font_size={'14px'} font_weight={'600'}>주 5회 5시간씩 교육을 들으며, HTML,CSS,JavaScript,React 기초 역량을 다시 수업하며 공부하는데 도움이 됐습니다.</Font2>
           <Font2  font_size={'14px'} font_weight={'600'}>솔로 프로젝트 "n-young"쇼핑몰 사이트를 제작하였습니다.</Font2>
@@ -45,10 +74,10 @@ function Main3() {
         </SmallBox>
       </Box>
       <Box>
-        <div>
-          <Font2>코드스테이츠(온라인)</Font2>
+        <SmallBox2>
+          <Title>코드스테이츠(온라인)</Title>
           <Font2 font_size={'20px'}>2022.10.20 - 2023.04.10</Font2>
-        </div>
+        </SmallBox2>
         <SmallBox>
           <Font2  font_size={'14px'} font_weight={'600'}>주 5회 8시간씩 온라인 교육을 들으며, HTML,CSS,JavaScript,React 바탕으로 자기주도학습을 길렀습니다.</Font2>
           <Font2  font_size={'14px'} font_weight={'600'}>팀으로 협업할때 사용되는 GitHub,Figma등 다양한 협업 툴을 익히며 공부하는데 도움이 됐습니다.</Font2>

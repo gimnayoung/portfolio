@@ -24,7 +24,6 @@ const ModalWrap = styled.div`
   transform: translate(-50%, -50%);
   z-index: 200;
   box-sizing: border-box;
-  border: 1px green solid;
   margin: 0 auto;
   width: 90%;
   height: 90%;
