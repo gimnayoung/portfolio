@@ -2,7 +2,8 @@ import React from "react";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
-
+import { lightTheme,darkTheme } from "./them/them";
+import { useState } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Main from "./page/main";
@@ -34,13 +35,16 @@ const Hidden =styled.div`
 overflow-x:hidden;
 `
 function App() {
+  const defalutTheme = localStorage.getItem('theme');
+  const [theme, setTheme] = useState(
+    defalutTheme ? defalutTheme : 'light')
   return (
     <HashRouter>
-      <ThemeProvider>
+      <ThemeProvider >
         <GlobalStyle />
         <Suspense fallback={<div>...loading</div>}>
           <Wrap>
-          <Header />
+          <Header theme={theme} setTheme={setTheme} />
           <Routes>
             <Route
               path="/"

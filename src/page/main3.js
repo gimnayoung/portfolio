@@ -81,7 +81,7 @@ function Main3() {
         <SmallBox>
           <Font2  font_size={'14px'} font_weight={'600'}>주 5회 8시간씩 온라인 교육을 들으며, HTML,CSS,JavaScript,React 바탕으로 자기주도학습을 길렀습니다.</Font2>
           <Font2  font_size={'14px'} font_weight={'600'}>팀으로 협업할때 사용되는 GitHub,Figma등 다양한 협업 툴을 익히며 공부하는데 도움이 됐습니다.</Font2>
-          <Font2  font_size={'14px'} font_weight={'600'}>팀 프로젝트 "스택오브플로우" 사이트를 클론하여 백엔드와 협업해 프로젝트를 진행시킨 경험이 있습니다.</Font2>
+          <Font2  font_size={'14px'} font_weight={'600'}>팀 프로젝트 "스택오버플로우" 사이트를 클론하여 백엔드와 협업해 프로젝트를 진행시킨 경험이 있습니다.</Font2>
         </SmallBox>
       </Box>
     </MainWrap>

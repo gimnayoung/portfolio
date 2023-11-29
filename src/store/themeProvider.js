@@ -1,11 +1,12 @@
-import { createContext, useState, useContext, useCallback } from "react";
+import { createContext, useState, useContext, useCallback,useEffect } from "react";
 import { lightTheme, darkTheme } from "../them/them";
 import { ThemeProvider as StyledProvider } from "styled-components";
 
 const ThemeContext = createContext({});
 
 const ThemeProvider = ({ children }) => {
-  const [ThemeMode, setThemeMode] = useState("light");
+  const defalutTheme = localStorage.getItem('theme')||'light';
+  const [ThemeMode, setThemeMode] = useState(defalutTheme);
   const themeObject = ThemeMode === "light" ? lightTheme : darkTheme;
   return (
     <ThemeContext.Provider value={{ ThemeMode, setThemeMode }}>
@@ -17,14 +18,13 @@ const ThemeProvider = ({ children }) => {
 function useTheme() {
   const context = useContext(ThemeContext);
   const { ThemeMode, setThemeMode } = context;
-
   const toggleTheme = useCallback(() => {
-    if (ThemeMode === "light") {
+    if(ThemeMode==='light'){
       setThemeMode("dark");
-      window.localStorage.setItem("theme", "dark");
+      localStorage.setItem('theme', 'dark');
     } else {
       setThemeMode("light");
-      window.localStorage.setItem("theme", "light");
+      localStorage.setItem('theme', 'light');
     }
   }, [ThemeMode]);
 
