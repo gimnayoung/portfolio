@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useTheme } from "../store/themeProvider";
 import Img1 from "../img/projectImg.png";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { useState } from "react";
@@ -31,7 +32,8 @@ const ModalWrap = styled.div`
   top: 50%;
   left: 50%;
   margin: 0 auto;
-  background-color: white;
+  background-color: ${(props) =>
+    props.theme === "light" ? "white" : "rgb(35, 35, 35)"};
   border-radius: 14px;
   /* padding: 12px; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
@@ -100,6 +102,8 @@ const FontBox = styled.div`
   flex-direction: column;
 `;
 const Font = styled.div`
+color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   line-height: 1.2;
   padding: 4px;
   color: ${(props) => props.color};
@@ -109,7 +113,6 @@ const Font = styled.div`
 const SubFont = styled.div`
   line-height: 1.2;
   font-size: 17px;
-  color: #505050;
   padding: 4px;
   font-weight: 800;
 `;
@@ -172,17 +175,19 @@ const Skill = styled.div`
   max-width: 300px;
 `;
 const A = styled.a`
-  color: #505050;
+color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   padding: 4px;
 `;
 function ProjectModal(props) {
+  const ThemeMode = useTheme();
   const HandleCloseModal = () => {
     props.setCloseModal(false);
   };
   return (
     <div>
       <BlackWrap onClick={HandleCloseModal}></BlackWrap>
-      <ModalWrap>
+      <ModalWrap theme={ThemeMode[0]}>
         <CloseBox onClick={HandleCloseModal}>
           <AiOutlineCloseSquare size={"30"} />
         </CloseBox>
@@ -192,21 +197,21 @@ function ProjectModal(props) {
               <Img src={Img1}></Img>
             </ImgWrap>
             <FontBox>
-              <Font>💡 포트폴리오</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>💡 포트폴리오</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 포트폴리오 사이트 입니다.
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔎 바로가기</Font>
-              <A
+              <Font theme={ThemeMode[0]}>🔎 바로가기</Font>
+              <A theme={ThemeMode[0]}
                 href="https://gimnayoung.github.io/portfolio/"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 포트폴리오
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://www.figma.com/file/2389ZPvIbQxm8PJ7fhcxGC/PortFolio?type=design&node-id=0-1&mode=design&t=7XvYBweHa93Tu1Rd-0"
                 fontSize={"14px"}
                 color={"gray"}
@@ -214,6 +219,7 @@ function ProjectModal(props) {
                 Figma
               </A>
               <A
+                theme={ThemeMode[0]}
                 href="https://github.com/gimnayoung/portfolio"
                 fontSize={"14px"}
                 color={"gray"}
@@ -222,23 +228,23 @@ function ProjectModal(props) {
               </A>
             </FontBox>
             <FontBox>
-              <Font>🙋‍♀️ 페이지</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🙋‍♀️ 페이지</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 홈 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프로젝트 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 스킬 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 콘텍트 페이지
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔨 사용 스킬</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🔨 사용 스킬</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드
               </Font>
               <SkillWrap>
@@ -247,13 +253,13 @@ function ProjectModal(props) {
                 <Skill>StyledComponent</Skill>
                 <Skill>LocalStorege</Skill>
               </SkillWrap>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"}  theme={ThemeMode[0]}>
                 DB
               </Font>
               <SkillWrap>
                 <Skill>FireBase</Skill>
               </SkillWrap>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"}  theme={ThemeMode[0]}>
                 배포
               </Font>
               <SkillWrap>
@@ -263,7 +269,7 @@ function ProjectModal(props) {
           </Left>
           <Right>
             <TitleBox>
-              <Font>맡은 페이지 & 사용 기술</Font>
+              <Font theme={ThemeMode[0]}>맡은 페이지 & 사용 기술</Font>
             </TitleBox>
             <SmallWrap>
               <SmallLeft>
@@ -273,7 +279,7 @@ function ProjectModal(props) {
                 <But>모바일</But>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 홈 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 홈 페이지</Font>
             <SubFont>
               -Styled Commnent의 ThemeProvider를 이용하여 다트모드를 적용시킨 홈 페이지 입니다.
             </SubFont>
@@ -291,7 +297,7 @@ function ProjectModal(props) {
                 <Img src={img2}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 프로젝트 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 프로젝트 페이지</Font>
             <SubFont>
               -프로젝트를 클릭하시면 자세한 정보 창을 볼 수 있습니다.
             </SubFont>
@@ -303,7 +309,7 @@ function ProjectModal(props) {
                 <Img src={img4}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 스킬 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 스킬 페이지</Font>
             <SubFont>
               - 사용해보거나 경험해본 적 있는 스킬들을 정리해둔 페이지 입니다.
             </SubFont>
@@ -315,12 +321,15 @@ function ProjectModal(props) {
                 <Img src={Img1}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 콘텍트 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 콘텍트 페이지</Font>
             <SubFont>
               - 게스트 방명록 페이지 입니다.
             </SubFont>
             <SubFont>
             - FireBase의 DB를 이용하여 데이터가 저장되고 보여집니다. 삭제와 비밀글 쓰기가 가능합니다.
+            </SubFont>
+            <SubFont>
+            - 비밀글 쓰기가 가능합니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>

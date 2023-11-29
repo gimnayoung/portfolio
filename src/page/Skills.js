@@ -3,7 +3,7 @@
 //코드 합치기
 //css
 import { styled } from "styled-components";
-
+import { useTheme } from "../store/themeProvider";
 import {DiReact} from "react-icons/di"
 import {SiStyledcomponents} from "react-icons/si"
 import {AiFillHtml5} from "react-icons/ai"
@@ -39,12 +39,12 @@ width: 100%;
 height: 120px;
 margin-bottom: 20px;
 padding: 12px;
-background-color: white;
 border: 2px gray solid;
 border-radius: 15px;
 display: flex;
 align-items: center;
 justify-content: space-between;
+background-color: ${(props) => (props.theme === "light" ? "white" : "black")};
 `
 const Icon=styled.div`
 background-color:#1E74C7;
@@ -82,17 +82,12 @@ margin-top: 50px;
 border-top: 3px #93BFCF dashed;
 `
 function Skills(){
-    const FrontSkills=[
-        {skill:"React",contents:"몰라용"},
-        {skill:"React",contents:"몰라용"},
-        {skill:"React",contents:"몰라용"},
-        {skill:"React",contents:"몰라용"},
-    ]
+    const ThemeMode = useTheme();
     return(
         <SkillWrap>
             <MainTitle>🔨 FrontEnd</MainTitle>
             <Top>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <DiReact size={90} color="white"/>
                     </Icon>
@@ -101,7 +96,7 @@ function Skills(){
                         <div>주로 리액트를 사용하여 프로젝트를 만들고, 꾸준히 공부하고 있습니다.</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <AiFillHtml5 size={83} color="white"/>
                     </Icon>
@@ -110,7 +105,7 @@ function Skills(){
                         <div>HTML를 공부하고 있습니다.</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <SiCss3 size={67} color="white"/>
                     </Icon>
@@ -119,7 +114,7 @@ function Skills(){
                         <div>CSS를 이용하여 애니메이션 등 사용한 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <BiLogoJavascript size={72} color="white"/>
                     </Icon>
@@ -128,7 +123,7 @@ function Skills(){
                         <div>JS 기반으로하여 리액트와 함께 공부하고있습니다</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <SiStyledcomponents size={87} color="white"/>
                     </Icon>
@@ -137,7 +132,7 @@ function Skills(){
                         <div>StyledComponents를 사용하여 프로젝트 제작 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <BiLogoTailwindCss size={67} color="white"/>
                     </Icon>
@@ -146,7 +141,7 @@ function Skills(){
                         <div>TailWind를 사용하여 프로젝트 제작 경험이 있습니다</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <BiLogoFirebase size={67} color="white"/>
                     </Icon>
@@ -159,7 +154,7 @@ function Skills(){
             <Solid></Solid>
             <MainTitle>Etc</MainTitle>
             <Bot>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <BsGithub size={67} color="white"/>
                     </Icon>
@@ -168,7 +163,7 @@ function Skills(){
                         <div>팀 프로젝트때 Github를 이용하여 브랜치 공유와 병합, 협업을 한 경험이 있습니다.</div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                 <Icon>
                     <SiGithubpages size={79} color="white"/>
                 </Icon>
@@ -177,7 +172,7 @@ function Skills(){
                     <div>GithubPage를 이용하여 개인 프로젝트 배포를 한 경험이 있습니다.</div>
                 </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <FaFigma size={67} color="white"/>
                     </Icon>
@@ -186,7 +181,7 @@ function Skills(){
                         <div>피그마를 사용하며 프로젝트를 만들기 전 기본 레이아웃을 제작한 경험이있습니다. </div>
                     </TextBox>
                 </SkillBox>
-                <SkillBox>
+                <SkillBox theme={ThemeMode[0]}>
                     <Icon>
                         <BsDiscord size={67} color="white"/>
                     </Icon>

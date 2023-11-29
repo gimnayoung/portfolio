@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import Img1 from "../img/projectImg.png";
 import Img4 from "../img/stackover.png";
 import { useState } from "react";
+import { useTheme } from "../store/themeProvider";
 import Img5 from "../img/StackLogin.png";
 import Img6 from "../img/StackLogout.png";
 import nyoung1 from "../img/nyoung1.png";
@@ -28,6 +29,8 @@ const BlackWrap = styled.div`
   height: 100%;
 `;
 const ModalWrap = styled.div`
+ background-color: ${(props) =>
+    props.theme === "light" ? "white" : "rgb(35, 35, 35)"};
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
@@ -40,7 +43,6 @@ const ModalWrap = styled.div`
   top: 50%;
   left: 50%;
   margin: 0 auto;
-  background-color: white;
   border-radius: 14px;
   /* padding: 12px; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
@@ -109,6 +111,8 @@ const FontBox = styled.div`
   flex-direction: column;
 `;
 const Font = styled.div`
+color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   line-height: 1.3;
   padding: 4px;
   color: ${(props) => props.color};
@@ -118,7 +122,6 @@ const Font = styled.div`
 const SubFont = styled.div`
   line-height: 1.3;
   font-size: 17px;
-  color: #505050;
   padding: 4px;
   font-weight: 800;
 `;
@@ -181,17 +184,19 @@ const Skill = styled.div`
   max-width: 300px;
 `;
 const A = styled.a`
-  color: #505050;
+  color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   padding: 4px;
 `;
 function ProjectModal3(props) {
+  const ThemeMode = useTheme();
   const HandleCloseModal = () => {
     props.setCloseModal3(false);
   };
   return (
     <div>
       <BlackWrap onClick={HandleCloseModal}></BlackWrap>
-      <ModalWrap>
+      <ModalWrap theme={ThemeMode[0]}>
         <CloseBox onClick={HandleCloseModal}>
           <AiOutlineCloseSquare size={"30"} />
         </CloseBox>
@@ -201,53 +206,52 @@ function ProjectModal3(props) {
               <Img src={mainNyoung}></Img>
             </ImgWrap>
             <FontBox>
-              <Font>💡 N-Young 쇼핑몰</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>💡 N-Young 쇼핑몰</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 가지각색의 여러 쇼핑몰 사이트 안에서 즐겨찾는 의류 상품들을
                 모아놓아 이곳 저곳 찾아다닐 필요없이 한 눈에 볼 수 있는 나만의
                 쇼핑몰 프로젝트 입니다.
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔎 바로가기</Font>
-              <A
+              <Font theme={ThemeMode[0]}>🔎 바로가기</Font>
+              <A theme={ThemeMode[0]}
                 href="https://gimnayoung.github.io/react"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 N-Young
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=7XvYBweHa93Tu1Rd-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://github.com/gimnayoung/react"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Github
               </A>
-              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
             </FontBox>
             <FontBox>
-              <Font>🙋‍♀️ 페이지</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🙋‍♀️ 페이지</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 메인 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 상품 디테일 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 마이 페이지
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔨 사용 스킬</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🔨 사용 스킬</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드
               </Font>
               <SkillWrap>
@@ -256,7 +260,7 @@ function ProjectModal3(props) {
                 <Skill>LocalStorege</Skill>
                 <Skill>StyledComponent</Skill>
               </SkillWrap>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 배포
               </Font>
               <SkillWrap>
@@ -266,7 +270,7 @@ function ProjectModal3(props) {
           </Left>
           <Right>
             <TitleBox>
-              <Font>맡은 페이지 & 사용 기술</Font>
+              <Font theme={ThemeMode[0]}>맡은 페이지 & 사용 기술</Font>
             </TitleBox>
             <SmallWrap>
               <SmallLeft>
@@ -276,7 +280,7 @@ function ProjectModal3(props) {
                 <But>모바일</But>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 메인 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 메인 페이지</Font>
             <SubFont>
               -상품 더보기 버튼을 클릭하면 Axios의 Get메소드를 이용해 상품들을 더 불러 올 수
               있습니다.
@@ -297,7 +301,7 @@ function ProjectModal3(props) {
                 <Img src={webNyoung2}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 상품 디테일 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 상품 디테일 페이지</Font>
             <SubFont>
               -장바구니 아이콘 버튼을 클릭하면 LocalStorege안에 장바구니 공간에 저장이 됩니다.
             </SubFont>

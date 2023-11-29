@@ -4,6 +4,7 @@ import Img4 from "../img/stackover.png";
 import { useState } from "react";
 import Img5 from "../img/StackLogin.png";
 import Img6 from "../img/StackLogout.png";
+import { useTheme } from "../store/themeProvider";
 
 import { AiOutlineCloseSquare } from "react-icons/ai";
 const BlackWrap = styled.div`
@@ -16,6 +17,8 @@ const BlackWrap = styled.div`
   height: 100vh;
 `;
 const ModalWrap = styled.div`
+ background-color: ${(props) =>
+    props.theme === "light" ? "white" : "rgb(35, 35, 35)"};
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
@@ -28,7 +31,6 @@ const ModalWrap = styled.div`
   top: 50%;
   left: 50%;
   margin: 0 auto;
-  background-color: white;
   border-radius: 14px;
   /* padding: 12px; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
@@ -97,6 +99,8 @@ const FontBox = styled.div`
   flex-direction: column;
 `;
 const Font = styled.div`
+color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   line-height: 1.2;
   padding: 4px;
   color: ${(props) => props.color};
@@ -106,7 +110,6 @@ const Font = styled.div`
 const SubFont = styled.div`
   line-height: 1.2;
   font-size: 17px;
-  color: #505050;
   padding: 4px;
   font-weight: 800;
 `;
@@ -169,17 +172,19 @@ const Skill = styled.div`
   max-width: 300px;
 `;
 const A = styled.a`
-  color: #505050;
+  color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   padding: 4px;
 `;
 function ProjectModal2(props) {
+  const ThemeMode = useTheme();
   const HandleCloseModal = () => {
     props.setCloseModal2(false);
   };
   return (
     <div>
       <BlackWrap onClick={HandleCloseModal}></BlackWrap>
-      <ModalWrap>
+      <ModalWrap theme={ThemeMode[0]}>
         <CloseBox onClick={HandleCloseModal}>
           <AiOutlineCloseSquare size={"30"} />
         </CloseBox>
@@ -189,33 +194,33 @@ function ProjectModal2(props) {
               <Img src={Img4}></Img>
             </ImgWrap>
             <FontBox>
-              <Font>💡 스택오버플로우</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font  theme={ThemeMode[0]}>💡 스택오버플로우</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프로그래밍과 소프트웨어 개발 관련된 질문과 답변을 공유하고
                 토론하는 커뮤니티 기반의 웹사이트"Stack Overflow"를 클론코딩한
                 팀 프로젝트 입니다.
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔎 바로가기</Font>
-              <Font fontSize={"12px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🔎 바로가기</Font>
+              <Font fontSize={"12px"} theme={ThemeMode[0]}>
                 * 배포하였으나 기간이 만료 되었습니다.
               </Font>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://www.figma.com/file/tJO0cq3cc7qQpBeRNnbTHh/myStackoverflow?type=design&node-id=0-1&mode=design&t=ucZuc0EI1do7FnEH-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://github.com/codestates-seb/seb42_pre_037"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Github
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://documenter.getpostman.com/view/24686427/2s93CGSbPy"
                 fontSize={"14px"}
                 color={"gray"}
@@ -224,26 +229,26 @@ function ProjectModal2(props) {
               </A>
             </FontBox>
             <FontBox>
-              <Font>🙋‍♀️ 맡은 역할</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🙋‍♀️ 맡은 역할</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 Login&Logout Header
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 Nav
               </Font>
             </FontBox>
             <FontBox>
-              <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>👨‍👨‍👧‍👧 팀원 정보</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드:4명
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 백엔드:3명
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔨 사용 스킬</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🔨 사용 스킬</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드
               </Font>
               <SkillWrap>
@@ -252,7 +257,7 @@ function ProjectModal2(props) {
                 <Skill>Tailwind CSS</Skill>
                 <Skill>Styled-Components</Skill>
               </SkillWrap>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 백엔드
               </Font>
               <SkillWrap>
@@ -265,7 +270,7 @@ function ProjectModal2(props) {
           </Left>
           <Right>
             <TitleBox>
-              <Font>맡은 페이지 & 사용 기술</Font>
+              <Font theme={ThemeMode[0]}>맡은 페이지 & 사용 기술</Font>
             </TitleBox>
             <SmallWrap>
               <SmallLeft>

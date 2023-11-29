@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useTheme } from "../store/themeProvider";
 import Img1 from "../img/projectImg.png";
 import Img4 from "../img/stackover.png";
 import { useState } from "react";
@@ -36,6 +37,8 @@ const BlackWrap = styled.div`
   height: 100%;
 `;
 const ModalWrap = styled.div`
+background-color: ${(props) =>
+    props.theme === "light" ? "white" : "rgb(35, 35, 35)"};
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
@@ -48,7 +51,6 @@ const ModalWrap = styled.div`
   top: 50%;
   left: 50%;
   margin: 0 auto;
-  background-color: white;
   border-radius: 14px;
   /* padding: 12px; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
@@ -119,6 +121,8 @@ const FontBox = styled.div`
 const Font = styled.div`
   line-height: 1.3;
   padding: 4px;
+  color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   color: ${(props) => props.color};
   font-size: ${(props) => props.fontSize || "20px"};
   font-weight: ${(props) => props.fontWeight || "800"};
@@ -126,7 +130,6 @@ const Font = styled.div`
 const SubFont = styled.div`
   line-height: 1.3;
   font-size: 17px;
-  color: #505050;
   padding: 4px;
   font-weight: 800;
 `;
@@ -189,17 +192,19 @@ const Skill = styled.div`
   max-width: 300px;
 `;
 const A = styled.a`
-  color: #505050;
+ color: ${(props) =>
+    props.theme === "light" ? "#505050" : "rgb(255, 255, 255)"};
   padding: 4px;
 `;
 function ProjectModal4(props) {
+  const ThemeMode = useTheme();
   const HandleCloseModal = () => {
     props.setCloseModal4(false);
   };
   return (
     <div>
       <BlackWrap onClick={HandleCloseModal}></BlackWrap>
-      <ModalWrap>
+      <ModalWrap theme={ThemeMode[0]}>
         <CloseBox onClick={HandleCloseModal}>
           <AiOutlineCloseSquare size={"30"} />
         </CloseBox>
@@ -209,36 +214,36 @@ function ProjectModal4(props) {
               <Img src={projectMainImg}></Img>
             </ImgWrap>
             <FontBox>
-              <Font>💡 ProjectTycoon</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>💡 ProjectTycoon</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 같은 학원 내에 다양한 교육과정을 배우고 있는 수강생을 위해
                 프로젝트를 개설 할 수 있는 플렛폼을 만든 사이트 입니다.
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔎 바로가기</Font>
-              <A
+              <Font theme={ThemeMode[0]}>🔎 바로가기</Font>
+              <A theme={ThemeMode[0]}
                 href="http://projecttycoon.com/"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 ProjectTycoon
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://www.figma.com/file/Li5t3DlBMZWtkopuPmpuXH/Project-Tycoon?type=design&node-id=0-1&mode=design&t=YztpsQYSq1HN6P3b-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://github.com/ReverserofCode/projecttycoon"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Github
               </A>
-              <A
+              <A theme={ThemeMode[0]}
                 href="https://docs.google.com/spreadsheets/d/1z80_yIPx4-Vdcr-t0Ce_--Qp0Kd7YM8qZZ-Y0WTj9v4/edit#gid=0"
                 fontSize={"14px"}
                 color={"gray"}
@@ -247,29 +252,29 @@ function ProjectModal4(props) {
               </A>
             </FontBox>
             <FontBox>
-              <Font>🙋‍♀️ 페이지</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🙋‍♀️ 페이지</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 랜딩 페이지(홈 페이지)
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프로젝트 개설 페이지
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 마이페이지
               </Font>
             </FontBox>
             <FontBox>
-              <Font>👨‍👨‍👧‍👧 팀원 정보</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>👨‍👨‍👧‍👧 팀원 정보</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드:3명
               </Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 백엔드:6명
               </Font>
             </FontBox>
             <FontBox>
-              <Font>🔨 사용 스킬</Font>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font theme={ThemeMode[0]}>🔨 사용 스킬</Font>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 프론트엔드
               </Font>
               <SkillWrap>
@@ -278,7 +283,7 @@ function ProjectModal4(props) {
                 <Skill>Styledcomponent</Skill>
                 <Skill>Css</Skill>
               </SkillWrap>
-              <Font fontSize={"15px"} color={"#505050"}>
+              <Font fontSize={"15px"} theme={ThemeMode[0]}>
                 백엔드
               </Font>
               <SkillWrap>
@@ -289,7 +294,7 @@ function ProjectModal4(props) {
           </Left>
           <Right>
             <TitleBox>
-              <Font>맡은 페이지 & 사용 기술</Font>
+              <Font theme={ThemeMode[0]}>맡은 페이지 & 사용 기술</Font>
             </TitleBox>
             <SmallWrap>
               <SmallLeft>
@@ -299,7 +304,7 @@ function ProjectModal4(props) {
                 <But>모바일</But>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 랜딩 페이지(홈 페이지)</Font>
+            <Font theme={ThemeMode[0]}>👉 랜딩 페이지(홈 페이지)</Font>
             <SubFont>-projecttycoon의 첫페이지 이며, 애니메이션을 추가하여 생동감있는 페이지를 구현했습니다.</SubFont>
             <SubFont>-반응형 웹 사이트 입니다.</SubFont>
             <SmallWrap marginTop={"4px"}>
@@ -310,7 +315,7 @@ function ProjectModal4(props) {
                 <Img src={projectMainImg2}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 프로젝트 개설 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 프로젝트 개설 페이지</Font>
             <SubFont>
               -외주 맡겨 디테일이 더해진 기본이미지 3장을 선택하거나 원하는 이미지를 넣을 수 있습니다.
             </SubFont>
