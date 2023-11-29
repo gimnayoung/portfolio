@@ -225,20 +225,26 @@ function ProjectModal4(props) {
                 ProjectTycoon
               </A>
               <A
-                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
+                href="https://www.figma.com/file/Li5t3DlBMZWtkopuPmpuXH/Project-Tycoon?type=design&node-id=0-1&mode=design&t=YztpsQYSq1HN6P3b-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
               <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
+                href="https://github.com/ReverserofCode/projecttycoon"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Github
               </A>
-              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
+              <A
+                href="https://docs.google.com/spreadsheets/d/1z80_yIPx4-Vdcr-t0Ce_--Qp0Kd7YM8qZZ-Y0WTj9v4/edit#gid=0"
+                fontSize={"14px"}
+                color={"gray"}
+              >
+                참고문서
+              </A>
             </FontBox>
             <FontBox>
               <Font>🙋‍♀️ 페이지</Font>
@@ -271,17 +277,13 @@ function ProjectModal4(props) {
                 <Skill>Axios</Skill>
                 <Skill>Styledcomponent</Skill>
                 <Skill>Css</Skill>
-                <Skill>Css</Skill>
               </SkillWrap>
               <Font fontSize={"15px"} color={"#505050"}>
                 백엔드
               </Font>
               <SkillWrap>
-                <Skill>Java</Skill>
-                <Skill>Axios</Skill>
-                <Skill>Styledcomponent</Skill>
-                <Skill>Css</Skill>
-                <Skill>Css</Skill>
+                <Skill>SpringBoot</Skill>
+                <Skill>MYSQL</Skill>
               </SkillWrap>
             </FontBox>
           </Left>

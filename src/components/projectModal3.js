@@ -218,14 +218,14 @@ function ProjectModal3(props) {
                 N-Young
               </A>
               <A
-                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
+                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=7XvYBweHa93Tu1Rd-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
               <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
+                href="https://github.com/gimnayoung/react"
                 fontSize={"14px"}
                 color={"gray"}
               >

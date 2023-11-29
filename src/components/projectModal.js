@@ -207,20 +207,19 @@ function ProjectModal(props) {
                 포트폴리오
               </A>
               <A
-                href="https://www.figma.com/file/dVpy4wH9k2plB0gPeD7Zuu/Untitled?type=design&node-id=0-1&mode=design&t=AK95WfXl7eQqj8rU-0"
+                href="https://www.figma.com/file/2389ZPvIbQxm8PJ7fhcxGC/PortFolio?type=design&node-id=0-1&mode=design&t=7XvYBweHa93Tu1Rd-0"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Figma
               </A>
               <A
-                href="https://github.com/codestates-seb/seb42_pre_037"
+                href="https://github.com/gimnayoung/portfolio"
                 fontSize={"14px"}
                 color={"gray"}
               >
                 Github
               </A>
-              {/* <A href='https://documenter.getpostman.com/view/24686427/2s93CGSbPy' fontSize={'14px'} color={'gray'}>참고문서</A> */}
             </FontBox>
             <FontBox>
               <Font>🙋‍♀️ 페이지</Font>

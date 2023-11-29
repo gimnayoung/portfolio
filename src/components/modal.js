@@ -32,7 +32,6 @@ const ModalWrap = styled.div`
   margin: 0 auto;
   background-color: white;
   border-radius: 14px;
-  /* padding: 12px; */
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
   @media screen and (max-width: 1010px) {
     width: 300px;
@@ -68,20 +67,17 @@ const State = styled.div`
   padding: 2px;
   display: flex;
   justify-content: space-between;
-  /* border: 1px red solid; */
   width: 150px;
   height: 17px;
   background-color: white;
   border-radius: 4px 4px 0 0;
 `;
 const Contents = styled.div`
-  /* border: 1px red solid; */
   padding: 4px;
 `;
 const Title = styled.div`
   font-size: 16px;
   font-weight: 600;
-  color: orange;
 `;
 function Modal(props) {
   const closeModal = () => {
@@ -96,14 +92,11 @@ function Modal(props) {
           </IconBox>
         </Header>
         <Contents>
-          <Title></Title>
-          <div>
-            {/* 나는 이런사람 입니다 평소에 웹/앱을 구경할때 다양한 기능들을 어떻게
-            구현하는지 궁금증을 가집니다 */}
-            {/* 다이어리에 기록하고 계획하는 걸 좋아합니다 더 섬세하고 꼼꼼하게 일을 진행할 수 있습니다 */}
-          </div>
-          <Title></Title>
-          <div>{/* 끊임없이 배우려는 자세와 새로운 도전을  수용하려고하는 자세를 가지려고 노력합니다*/}</div>
+          <Title>프론트엔드 개발자로서의 나는 ? </Title>
+          <div>리액트를 중심으로 공부하며 리액트를 사용하여 프로젝트를 만들어갑니다.</div>
+          <Title>+</Title>
+          <div>다이어리에 해야할 일을 계획하고 꼼꼼하게 진행하며 프로젝트를 완성시킵니다. </div>
+          <div>동료들과 협업할때에는 끊임없이 배우려는 자세와 새로운 도전을 수용하려고하는 자세를 가지려고 노력합니다.</div>
         </Contents>
       </Wrap>
     </ModalWrap>

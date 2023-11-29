@@ -257,7 +257,7 @@ function ProjectModal2(props) {
               </Font>
               <SkillWrap>
                 <Skill>Spring Boot</Skill>
-                <Skill>mySQL</Skill>
+                <Skill>MYSQL</Skill>
                 <Skill>AWS S3</Skill>
                 <Skill>AWS EC2</Skill>
               </SkillWrap>
