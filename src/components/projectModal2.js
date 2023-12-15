@@ -277,7 +277,7 @@ function ProjectModal2(props) {
                 <But>데스크탑</But>
               </SmallLeft>
             </SmallWrap>
-            <Font>👉 Login&Logout Header</Font>
+            <Font theme={ThemeMode[0]}>👉 Login&Logout Header</Font>
             <SubFont>
               -로그인 했을때와 로그아웃을 했을때 Zustand 상태관리 라이브러리를
               이용하여 Header 가 변할 수 있도록 구현했습니다.
@@ -298,7 +298,7 @@ function ProjectModal2(props) {
                 <Img src={Img4}></Img>
               </SmallLeft>
             </SmallWrap>
-            <Font>👉 Nav</Font>
+            <Font theme={ThemeMode[0]}>👉 Nav</Font>
             <SubFont>-TailWind Css를 사용하여 Nav를 구현 했습니다.</SubFont>
             <SmallWrap borderBottom={"2px gray solid"} marginTop={"8px"}>
               <SmallLeft>

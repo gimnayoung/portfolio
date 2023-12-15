@@ -51,7 +51,6 @@ function App() {
               element={
                 <div>
                   <Main2></Main2>
-                  {/* <Main3></Main3> */}
                 </div>
               }
             ></Route>

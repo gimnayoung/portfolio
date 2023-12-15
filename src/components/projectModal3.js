@@ -313,13 +313,13 @@ function ProjectModal3(props) {
                 <Img src={webNyoung3}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 장바구니 & 찜 페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 장바구니 & 찜 페이지</Font>
             <SubFont>
               -LocalStorege의 장바구니 저장공간에서 꺼내와 장바구니 상품들을 볼 수 있습니다.
             </SubFont>
-            <SubFont>
+            {/* <SubFont>
               -장바구니 상품들은 삭제가 가능합니다.
-            </SubFont>
+            </SubFont> */}
             <SubFont>
             -LocalStorege안에 최근 본 상품들이 저장 되어있고, 최신순으로 정렬 하여 볼 수 있습니다.
             </SubFont>

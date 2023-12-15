@@ -333,7 +333,7 @@ function ProjectModal4(props) {
                 <Img src={newpage2}></Img>
               </SmallRight>
             </SmallWrap>
-            <Font>👉 마이페이지</Font>
+            <Font theme={ThemeMode[0]}>👉 마이페이지</Font>
             <SubFont>- 내 프로필 수정과 활동관리를 볼 수 있는 페이지 입니다.</SubFont>
             <SubFont>- Axios의 Put메소드를 이용하여 회원 정보를 수정 할 수 있게끔 백엔드와 협업하였습니다.</SubFont>
             <SmallWrap marginTop={"4px"}>

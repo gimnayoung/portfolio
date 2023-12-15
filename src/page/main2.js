@@ -245,7 +245,7 @@ function Main2() {
         </Content>
       </ContentWrap>
       {OnModal && <Modal setOffModal={setOffModal} />}
-     <Main3></Main3>
+     {/* <Main3></Main3> */}
     </Wrap>
   </>
   );

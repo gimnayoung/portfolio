@@ -326,7 +326,7 @@ function ProjectModal(props) {
               - 게스트 방명록 페이지 입니다.
             </SubFont>
             <SubFont>
-            - FireBase의 DB를 이용하여 데이터가 저장되고 보여집니다. 삭제와 비밀글 쓰기가 가능합니다.
+            - FireBase의 DB를 이용하여 데이터가 저장되고 보여집니다.
             </SubFont>
             <SubFont>
             - 비밀글 쓰기가 가능합니다.

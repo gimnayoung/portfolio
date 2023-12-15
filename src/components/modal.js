@@ -4,20 +4,6 @@ import { VscChromeMinimize } from "react-icons/vsc";
 import { useState } from "react";
 
 const ModalWrap = styled.div`
-  /* box-sizing: border-box;
-  border: 1px green solid;
-  margin: 0 auto;
-  width: 20%;
-  min-width: 280px;
-  height: 45%;
-  position: fixed;
-  top: 25%;
-  left: 40%;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px; */
-  
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
@@ -25,7 +11,7 @@ const ModalWrap = styled.div`
   box-sizing: border-box;
   margin: 0 auto;
   width: 30%;
-  height: 45%;
+  height: 35%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -35,7 +21,7 @@ const ModalWrap = styled.div`
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
   @media screen and (max-width: 1010px) {
     width: 300px;
-   height: 250px;
+   height: 230px;
   }
 `;
 const Wrap = styled.div``;
@@ -92,11 +78,9 @@ function Modal(props) {
           </IconBox>
         </Header>
         <Contents>
-          <Title>프론트엔드 개발자로서의 나는 ? </Title>
-          <div>리액트를 중심으로 공부하며 리액트를 사용하여 프로젝트를 만들어갑니다.</div>
-          <Title>+</Title>
-          <div>다이어리에 해야할 일을 계획하고 꼼꼼하게 진행하며 프로젝트를 완성시킵니다. </div>
-          <div>동료들과 협업할때에는 끊임없이 배우려는 자세와 새로운 도전을 수용하려고하는 자세를 가지려고 노력합니다.</div>
+          <Title>💙웹 사이트/서비스를 이용할 때 다양한 기능을 어떻게 구현하는지에 대한 궁금증을 가지고 공부하려 노력합니다.</Title><br></br>
+          <Title>💙풀리지 않는 코드나 에러가 있다면 서치나 팀원간의 소통을 하며 공유하여 하나씩 풀어나가는 과정을 즐깁니다. </Title><br></br>
+          <Title>💙팀원 혹은 동료들에게 피드백을 받으며 배워가는것을 좋아합니다. </Title><br></br>
         </Contents>
       </Wrap>
     </ModalWrap>
