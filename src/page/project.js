@@ -14,6 +14,7 @@ const ProjectWrap = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 20px;
 `;
 const Black = styled.div`
   display: flex;
@@ -72,7 +73,7 @@ const Text = styled.div`
   font-weight: ${(props) => props.font_weight};
 `;
 const SkillBox = styled.div`
-margin-right: 4px;
+  margin-right: 4px;
   height: 18px;
   background-color: #1e74c7;
   border-radius: 14px;
@@ -229,7 +230,7 @@ function Projects() {
               <SkillBox>
                 <Text color={"white"}>LocalStorege</Text>
               </SkillBox>
-              <SkillBox >
+              <SkillBox>
                 <Text color={"white"}>StyledComponent</Text>
               </SkillBox>
             </SkillWrap>

@@ -3,7 +3,7 @@ import { useTheme } from "../store/themeProvider";
 import styled, { keyframes } from "styled-components";
 import Modal from "../components/modal";
 import MainNy from "../img/nymain.jpg";
-import Main3 from "../page/main3"
+import Main3 from "../page/main3";
 import { useNavigate } from "react-router-dom";
 
 import { BsFillPersonFill } from "react-icons/bs";
@@ -166,6 +166,20 @@ const Icon = styled.div`
     height: 70px;
   }
 `;
+const Introduce2 = styled.div`
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 12px;
+  @media screen and (max-width: 974px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 15px;
+  }
+`;
 const Font = styled.div`
   font-size: 17px;
   font-weight: 800;
@@ -177,14 +191,14 @@ const Title = styled.h1`
   margin: 0 auto;
 `;
 const A = styled.a`
-text-decoration: underline;
-cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
   color: ${(props) => (props.theme === "light" ? "black" : "white")};
 `;
-const Main3Wrap=styled.div`
-width: 100vw;
-background-color: yellowgreen;
-`
+const Main3Wrap = styled.div`
+  width: 100vw;
+  background-color: yellowgreen;
+`;
 function Main2() {
   let navigate = useNavigate();
   const ThemeMode = useTheme();
@@ -195,59 +209,65 @@ function Main2() {
   };
   return (
     <>
-    <Wrap>
-      <IntroduceWrap>
-        <Introduce>안녕하세요 :)</Introduce>
-        <Introduce>프론트엔드 엔지니어 김나영 입니다.</Introduce>
-      </IntroduceWrap>
-      <ContentWrap theme={ThemeMode[0]}>
-        <ImgWrap>
-          <Img theme={ThemeMode[0]} src={MainNy}></Img>
-        </ImgWrap>
-        <Content>
-          <BoxWrap>
-            <AnimationBox onClick={openModal}>
-              <Icon>
-                <BsFillPersonFill size={"37px"}></BsFillPersonFill>
-              </Icon>
-              <Font>김나영 / Kim Nayoung</Font>
-              <Dark>
-                <Span>클릭해 주세요.</Span>
-              </Dark>
-            </AnimationBox>
-            <Box>
-              <Icon>
-                <FiPhoneCall size={"35px"} />
-              </Icon>
-              <Font>010.9961.5320</Font>
-            </Box>
-            <Box>
-              <Icon>
-                <BsGithub size={"35px"} />
-              </Icon>
-              <Font>gimnayoung</Font>
-            </Box>
-            <Box>
-              <Icon>
-                <MdOutlineEmail size={"35px"} />
-              </Icon>
-              <div>
-                <Font>kny_7_@naver.com</Font>
-                <A 
-                onClick={() => {
-                  navigate("/contact");
-                }}theme={ThemeMode[0]}>
-                  contact 바로가기
-                </A>
-              </div>
-            </Box>
-          </BoxWrap>
-        </Content>
-      </ContentWrap>
-      {OnModal && <Modal setOffModal={setOffModal} />}
-     {/* <Main3></Main3> */}
-    </Wrap>
-  </>
+      <Wrap>
+        <IntroduceWrap>
+          <Introduce>안녕하세요 :)</Introduce>
+          <Introduce>프론트엔드 엔지니어 김나영 입니다.</Introduce>
+          <Introduce2>
+            사용자 경험에 대해 끊임없이 고민함으로써, 친화적인 UX/UI를 만들기
+            위해 노력하며 성장하는 것을 좋아합니다.
+          </Introduce2>
+        </IntroduceWrap>
+        <ContentWrap theme={ThemeMode[0]}>
+          <ImgWrap>
+            <Img theme={ThemeMode[0]} src={MainNy}></Img>
+          </ImgWrap>
+          <Content>
+            <BoxWrap>
+              <AnimationBox onClick={openModal}>
+                <Icon>
+                  <BsFillPersonFill size={"37px"}></BsFillPersonFill>
+                </Icon>
+                <Font>김나영 / Kim Nayoung</Font>
+                <Dark>
+                  <Span>클릭해 주세요.</Span>
+                </Dark>
+              </AnimationBox>
+              <Box>
+                <Icon>
+                  <FiPhoneCall size={"35px"} />
+                </Icon>
+                <Font>010.9961.5320</Font>
+              </Box>
+              <Box>
+                <Icon>
+                  <BsGithub size={"35px"} />
+                </Icon>
+                <Font>gimnayoung</Font>
+              </Box>
+              <Box>
+                <Icon>
+                  <MdOutlineEmail size={"35px"} />
+                </Icon>
+                <div>
+                  <Font>kny_7_@naver.com</Font>
+                  <A
+                    onClick={() => {
+                      navigate("/contact");
+                    }}
+                    theme={ThemeMode[0]}
+                  >
+                    contact 바로가기
+                  </A>
+                </div>
+              </Box>
+            </BoxWrap>
+          </Content>
+        </ContentWrap>
+        {OnModal && <Modal setOffModal={setOffModal} />}
+        {/* <Main3></Main3> */}
+      </Wrap>
+    </>
   );
 }
 export default Main2;
