@@ -251,7 +251,7 @@ function ProjectModal(props) {
                 <Skill>React</Skill>
                 <Skill>Axios</Skill>
                 <Skill>StyledComponent</Skill>
-                <Skill>LocalStorege</Skill>
+                <Skill>LocalStorage</Skill>
               </SkillWrap>
               <Font fontSize={"15px"}  theme={ThemeMode[0]}>
                 DB

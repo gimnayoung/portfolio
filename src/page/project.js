@@ -228,7 +228,7 @@ function Projects() {
                 <Text color={"white"}>Axios</Text>
               </SkillBox>
               <SkillBox>
-                <Text color={"white"}>LocalStorege</Text>
+                <Text color={"white"}>LocalStorage</Text>
               </SkillBox>
               <SkillBox>
                 <Text color={"white"}>StyledComponent</Text>

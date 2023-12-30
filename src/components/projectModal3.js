@@ -257,7 +257,7 @@ function ProjectModal3(props) {
               <SkillWrap>
                 <Skill>React</Skill>
                 <Skill>Axios</Skill>
-                <Skill>LocalStorege</Skill>
+                <Skill>LocalStorage</Skill>
                 <Skill>StyledComponent</Skill>
               </SkillWrap>
               <Font fontSize={"15px"} theme={ThemeMode[0]}>
@@ -303,7 +303,7 @@ function ProjectModal3(props) {
             </SmallWrap>
             <Font theme={ThemeMode[0]}>👉 상품 디테일 페이지</Font>
             <SubFont>
-              -장바구니 아이콘 버튼을 클릭하면 LocalStorege안에 장바구니 공간에 저장이 됩니다.
+              -장바구니 아이콘 버튼을 클릭하면 LocalStorage안에 장바구니 공간에 저장이 됩니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
@@ -315,13 +315,13 @@ function ProjectModal3(props) {
             </SmallWrap>
             <Font theme={ThemeMode[0]}>👉 장바구니 & 찜 페이지</Font>
             <SubFont>
-              -LocalStorege의 장바구니 저장공간에서 꺼내와 장바구니 상품들을 볼 수 있습니다.
+              -LocalStorage의 장바구니 저장공간에서 꺼내와 장바구니 상품들을 볼 수 있습니다.
             </SubFont>
             {/* <SubFont>
               -장바구니 상품들은 삭제가 가능합니다.
             </SubFont> */}
             <SubFont>
-            -LocalStorege안에 최근 본 상품들이 저장 되어있고, 최신순으로 정렬 하여 볼 수 있습니다.
+            -LocalStorage안에 최근 본 상품들이 저장 되어있고, 최신순으로 정렬 하여 볼 수 있습니다.
             </SubFont>
             <SmallWrap marginTop={"4px"}>
               <SmallLeft>
